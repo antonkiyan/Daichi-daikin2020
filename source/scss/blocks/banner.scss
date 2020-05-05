@@ -1,0 +1,152 @@
+@keyframes banner-overlay {
+  0% { width: 100%; }
+  66% { width: 100%; }
+  100% { width: 0; }
+}
+
+// @keyframes back {
+//   0% {
+//     background-size: 140% auto;
+//   }
+
+//   80% {
+//     background-size: 140% auto;
+//   }
+
+//   99% {
+//     background-size: 100% auto;
+//   }
+// }
+
+.banner__item {
+  position: relative;
+
+  width: 25%;
+  height: 472px;
+  padding: 40px 56px;
+
+  font-size: 32px;
+  line-height: 36px;
+  color: #ffffff;
+  text-decoration: none;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    @include transition;
+
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: #000000;
+    opacity: 5%;
+  }
+
+  &:hover::before {
+    opacity: 30%;
+  }
+
+  & span {
+    position: relative;
+    z-index: 10;
+  }
+
+  &--split {
+    background-image: url("../img/banner-split.jpg");
+
+    @include retina {
+      background-image: url("../img/banner-split@2x.jpg");
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      height: 100%;
+
+      background-color: #000000;
+
+      animation: banner-overlay 3s cubic-bezier(.78,.01,.46,.56);
+      z-index: 20;
+    }
+  }
+
+  &--mult {
+    background-image: url("../img/banner-mult.jpg");
+
+    @include retina {
+      background-image: url("../img/banner-mult@2x.jpg");
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      height: 100%;
+
+      background-color: #000000;
+
+      animation: banner-overlay 3.2s cubic-bezier(.78,.01,.46,.56);
+      z-index: 20;
+    }
+  }
+
+  &--aircleaner {
+    background-image: url("../img/banner-aircleaner.jpg");
+
+    @include retina {
+      background-image: url("../img/banner-aircleaner@2x.jpg");
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      height: 100%;
+
+      background-color: #000000;
+
+      animation: banner-overlay 3.4s cubic-bezier(.78,.01,.46,.56);
+      z-index: 20;
+    }
+  }
+
+  &--program {
+    background-image: url("../img/banner-program.jpg");
+
+    @include retina {
+      background-image: url("../img/banner-program@2x.jpg");
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      height: 100%;
+
+      background-color: #000000;
+
+      animation: banner-overlay 3.6s cubic-bezier(.78,.01,.46,.56);
+      z-index: 20;
+    }
+  }
+}

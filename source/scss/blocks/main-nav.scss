@@ -1,0 +1,112 @@
+.main-nav {
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    @include transition;
+
+    position: relative;
+    margin-left: 40px;
+    padding-bottom: 8px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &:hover {
+      cursor: pointer;
+      color: #009ee5;
+    }
+  }
+
+  &__item:hover .main-nav__subnav-list{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__item:not(:nth-child(2)) .main-nav__item-name {
+    position: relative;
+    padding-right: 16px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 7px;
+      height: 4px;
+
+      background-image: url("../img/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__link {
+    @include transition;
+
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    color: #009ee5;
+  }
+}
+
+.main-nav__subnav-list {
+  @include transition;
+
+  position: absolute;
+  top: 32px;
+
+  width: 256px;
+  padding: 32px;
+
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+
+  &--products {
+    left: -30px;
+  }
+
+  &--programs {
+    right: -20px;
+  }
+}
+
+.main-nav__subnav-item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.main-nav__subnav-link {
+  @include transition;
+
+  text-decoration: none;
+  color: #000000;
+
+  &:hover {
+    color: #009ee5;
+  }
+}
+
+@include desktop {
+  .main-nav {
+    &__item:hover .main-nav__subnav-list{
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &__item-name.js--show + .main-nav__subnav-list {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
