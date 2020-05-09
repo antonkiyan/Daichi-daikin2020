@@ -99,6 +99,17 @@
   max-width: 1600px;
   padding-left: 96px;
   padding-right: 96px;
+
+  @include desktop {
+    max-width: 1024px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include tablet {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 //ПЛАНВНЫЙ ХОВЕР

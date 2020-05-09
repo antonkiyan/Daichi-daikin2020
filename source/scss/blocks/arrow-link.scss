@@ -1,0 +1,45 @@
+.arrow-link {
+  @include transition;
+
+  position: relative;
+
+  padding-right: 20px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111112;
+  text-decoration: none;
+
+  &--white {
+    color: #ffffff;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    width: 14px;
+    height: 9px;
+    margin-top: -3px;
+
+    background-image: url("../img/arrow-right.svg");
+  }
+
+  &--white::before {
+    background-image: url("../img/arrow-right-white.svg");
+  }
+
+  &:hover {
+    color: #009ee5;
+  }
+
+  &:hover::before {
+    margin-top: -3px;
+
+    background-image: url("../img/arrow-right-blue.svg");
+  }
+}

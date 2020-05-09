@@ -1,0 +1,172 @@
+.split-cards {
+  width: 1408px;
+  margin: 0 auto;
+
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 453px;
+    min-height: 632px;
+    margin-bottom: 24px;
+    padding: 45px 46px 64px;
+
+    text-align: center;
+
+    background-color: #f6f6f6;
+    background-repeat: no-repeat;
+  }
+
+  &__item:not(:nth-child(3n + 4)) {
+    margin-right: auto;
+  }
+
+  &__item:first-child {
+    width: 100%;
+    min-height: 424px;
+    margin-right: 0;
+    padding: 64px 849px 80px 133px;
+
+    background-image: url("../img/ftxb-rxb-big.png");
+    background-size: 567px auto;
+    background-position: top 45px right;
+
+    @include retina {
+      background-image: url("../img/ftxb-rxb-big@2x.png");
+    }
+  }
+
+  &__item:nth-child(2) {
+    background-image: url("../img/ftxf-rxf.png");
+    background-size: 326px auto;
+    background-position: top 237px center;
+
+    @include retina {
+      background-image: url("../img/ftxf-rxf@2x.png");
+    }
+  }
+
+  &__item:nth-child(3) {
+    background-image: url("../img/ftxm-rxm.png");
+    background-size: 326px auto;
+    background-position: top 237px center;
+
+    @include retina {
+      background-image: url("../img/ftxm-rxm@2x.png");
+    }
+  }
+
+  &__item:nth-child(4) {
+    background-image: url("../img/ftxj-rxj.png");
+    background-size: 370px auto;
+    background-position: top 239px center;
+
+    @include retina {
+      background-image: url("../img/ftxj-rxj@2x.png");
+    }
+  }
+
+  &__item:nth-child(5) {
+    background-image: url("../img/ftxg-rxg.png");
+    background-size: 370px auto;
+    background-position: top 239px center;
+
+    @include retina {
+      background-image: url("../img/ftxg-rxg@2x.png");
+    }
+  }
+
+  &__item:nth-child(6) {
+    background-image: url("../img/ftxs-rxs.png");
+    background-size: 376px auto;
+    background-position: top 237px center;
+
+    @include retina {
+      background-image: url("../img/ftxs-rxs@2x.png");
+    }
+  }
+
+  &__item:nth-child(7) {
+    background-image: url("../img/ftxp-rxp.png");
+    background-size: 375px auto;
+    background-position: top 237px center;
+
+    @include retina {
+      background-image: url("../img/ftxp-rxp@2x.png");
+    }
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 16px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__desc {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__desc--main {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  &__price {
+    margin: auto 0 24px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  &__buy-link {
+    width: 124px;
+  }
+
+  &__bottom .split-cards__buy-link {
+    margin-right: 22px;
+  }
+}
+
+@include desktop {
+  .split-cards {
+    width: 960px;
+    padding-bottom: 40px;
+
+    &__item {
+      width: 468px;
+    }
+
+    &__item:not(:nth-child(3n + 4)) {
+      margin-right: 0;
+    }
+
+    &__item:not(:nth-child(2n + 1)) {
+      margin-right: auto;
+    }
+
+    &__item:first-child {
+      padding: 64px 513px 80px 21px;
+
+      background-size: 502px auto;
+    }
+  }
+}

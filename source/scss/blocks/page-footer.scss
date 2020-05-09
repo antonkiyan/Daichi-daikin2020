@@ -1,0 +1,86 @@
+.page-footer {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 480px;
+  padding-top: 181px;
+
+  background-color: #f6f6f6;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 120px;
+    left: 50%;
+
+    width: 1px;
+    height: 240px;
+
+    background-color: #dddddd;
+  }
+
+  &__contact,
+  &__to-dealers {
+    width: 376px;
+
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    color: #111112;
+    text-align: center;
+  }
+
+  &__contact {
+    margin-right: 342px;
+  }
+
+  &__phone {
+    @include transition;
+
+    color: #009ee5;
+    text-decoration: none;
+
+    border-bottom: 2px solid transparent;
+  }
+
+  &__phone:hover {
+    border-bottom: 2px solid #009ee5;
+  }
+
+  &__to-dealers-title {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  &__to-dealers-link {
+    width: 161px;
+  }
+}
+
+@include desktop {
+  .page-footer {
+    min-height: 384px;
+    padding-top: 133px;
+
+    &::before {
+      top: 72px;
+    }
+
+    &__contact,
+    &__to-dealers {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &__contact {
+      margin-right: 116px;
+    }
+
+    &__to-dealers-title {
+      margin-bottom: 33px;
+    }
+  }
+}

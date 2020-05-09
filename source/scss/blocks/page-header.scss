@@ -37,8 +37,22 @@
     margin-bottom: 48px;
   }
 
+  &__logo {
+    width: 169px;
+    height: 36px;
+  }
+
+  &__logo-img {
+    width: 100%;
+    height: auto;
+  }
+
   &__main-nav {
     margin-left: auto;
+  }
+
+  &__nav-button {
+    display: none;
   }
 
   &__title {
@@ -65,7 +79,7 @@
 
     display: block;
 
-    animation: title 1.8s ease-out;
+    animation: title 1.8s ease-in-out;
   }
 
   &__title span:last-child span {
@@ -73,7 +87,7 @@
 
     display: block;
 
-    animation: title 1.6s ease-out 0.3s;
+    animation: title 1.6s ease-in-out 0.3s;
   }
 
   &::before {
@@ -89,5 +103,69 @@
     background-color: #000000;
 
     animation: overlay 2s cubic-bezier(.94,.03,.72,.64);
+  }
+}
+
+@include desktop {
+  .page-header {
+    padding-bottom: 80px;
+
+    &__bar {
+      padding-top: 31px;
+    }
+
+    &__title {
+      max-width: 533px;
+
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+}
+
+@include tablet {
+  .page-header {
+    &__bar {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 64px;
+    }
+
+    &__logo {
+      width: 107px;
+      height: 23px;
+    }
+
+    &__nav-button {
+      position: relative;
+
+      display: block;
+      margin-left: auto;
+
+      width: 32px;
+      height: 32px;
+
+      background-color: transparent;
+      border: none;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: 11px;
+        left: 0;
+
+        width: 32px;
+        height: 2px;
+
+        background-color: #000000;
+        box-shadow: 0 8px 0 #000000;
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }

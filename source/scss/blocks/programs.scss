@@ -1,0 +1,102 @@
+.programs {
+  width: 1408px;
+
+  background-repeat: no-repeat;
+  background-position: top 96px left;
+  background-size: 704px auto;
+
+  &--my-comfort {
+    min-height: 840px;
+    margin: 0 auto;
+    padding: 168px 0 50px 784px;
+
+    background-image: url("../img/programs-1.jpg");
+
+    @include retina {
+      background-image: url("../img/programs-1@2x.jpg");
+    }
+  }
+
+  &--climat-online {
+    min-height: 656px;
+    margin: 0 auto;
+    padding: 168px 0 0 784px;
+
+    background-image: url("../img/programs-2.jpg");
+
+    @include retina {
+      background-image: url("../img/programs-2@2x.jpg");
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: rgba(17, 17, 18, 0.5);
+  }
+
+  &__slogan {
+    display: block;
+    margin: 0;
+    margin-bottom: 32px;
+
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    color: #111112;
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 24px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #111112;
+  }
+}
+
+@include desktop {
+  .programs {
+    width: 960px;
+    padding: 88px 0 0 520px;
+
+    background-position: top 64px left;
+    background-size: 480px auto;
+
+    &--my-comfort {
+      min-height: auto;
+
+      background-image: url("../img/program-1-desktop.jpg");
+
+      @include retina {
+        background-image: url("../img/program-1-desktop@2x.jpg");
+      }
+    }
+
+    &--climat-online {
+      min-height: auto;
+
+      background-image: url("../img/program-2-desktop.jpg");
+
+      @include retina {
+        background-image: url("../img/program-2-desktop@2x.jpg");
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    &__slogan {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}

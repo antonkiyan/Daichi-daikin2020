@@ -1,0 +1,175 @@
+.multi-system {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1408px;
+  margin: 0 auto;
+  padding-top: 96px;
+
+  &__title {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 32px;
+
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    color: #111112;
+    text-align: center;
+  }
+
+  &__desc {
+    width: 100%;
+    padding: 0 453px;
+    margin: 0;
+    margin-bottom: 76px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #111112;
+    text-align: center;
+  }
+
+  &__model {
+    width: 692px;
+    min-height: 456px;
+    padding-top: 56px;
+    margin-bottom: 24px;
+
+    text-align: center;
+
+    background-color: #f6f6f6;
+    background-repeat: no-repeat;
+  }
+
+  &__model--mxm {
+    margin-right: auto;
+
+    background-image: url("../img/mxm.png");
+    background-size: 436px auto;
+    background-position: top 264px left 137px;
+
+    @include retina {
+      background-image: url("../img/mxm@2x.png");
+    }
+  }
+
+  &__model--mxs {
+    background-image: url("../img/mxs.png");
+    background-size: 376px auto;
+    background-position: top 271px left 158px;
+
+    @include retina {
+      background-image: url("../img/mxs@2x.png");
+    }
+  }
+
+  &__model-title {
+    margin: 0;
+    margin-bottom: 8px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(17, 17, 18, 0.5);
+    text-align: center;
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 16px;
+
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #111112;
+  }
+
+  &__price {
+    margin: 0;
+    margin-bottom: 16px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #111112;
+  }
+
+  &__buy-link {
+    width: 124px;
+  }
+
+  &__select {
+    width: 100%;
+    min-height: 520px;
+    padding-top: 56px;
+
+    text-align: center;
+
+    background-image: url("../img/multi-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 1408px auto;
+
+    @include retina {
+      background-image: url("../img/multi-bg@2x.jpg");
+    }
+  }
+
+  &__select-title {
+    margin: 0;
+    margin-bottom: 32px;
+
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #111112;
+  }
+
+  &__select-desc {
+    margin: 0 auto;
+    width: 532px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #111112;
+  }
+}
+
+@include desktop {
+  .multi-system {
+    justify-content: center;
+    width: 100%;
+    padding-top: 78px;
+
+    &__desc {
+      width: 100%;
+      padding: 0 calc((100% - 502px)/2);
+      margin-bottom: 52px;
+    }
+
+    &__model {
+      width: 468px;
+      min-height: 456px;
+    }
+
+    &__model--mxm {
+      margin-right: 24px;
+      background-position: top 264px left 25px;
+    }
+
+    &__model--mxs {
+      background-position: top 271px left 46px;
+    }
+
+    &__select {
+      background-image: url("../img/multi-bg-desktop.jpg");
+      background-size: cover;
+      background-position: left center;
+
+      @include retina {
+        background-image: url("../img/multi-bg-desktop@2x.jpg");
+      }
+    }
+  }
+}

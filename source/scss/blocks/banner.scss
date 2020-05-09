@@ -21,6 +21,7 @@
 .banner__item {
   position: relative;
 
+  box-sizing: border-box;
   width: 25%;
   height: 472px;
   padding: 40px 56px;
@@ -76,7 +77,7 @@
 
       background-color: #000000;
 
-      animation: banner-overlay 3s cubic-bezier(.78,.01,.46,.56);
+      animation: banner-overlay 3s ease-in-out;
       z-index: 20;
     }
   }
@@ -99,7 +100,7 @@
 
       background-color: #000000;
 
-      animation: banner-overlay 3.2s cubic-bezier(.78,.01,.46,.56);
+      animation: banner-overlay 3.2s ease-in-out;
       z-index: 20;
     }
   }
@@ -122,7 +123,7 @@
 
       background-color: #000000;
 
-      animation: banner-overlay 3.4s cubic-bezier(.78,.01,.46,.56);
+      animation: banner-overlay 3.4s ease-in-out;
       z-index: 20;
     }
   }
@@ -145,8 +146,129 @@
 
       background-color: #000000;
 
-      animation: banner-overlay 3.6s cubic-bezier(.78,.01,.46,.56);
+      animation: banner-overlay 3.6s ease-in-out;
       z-index: 20;
     }
+  }
+}
+
+.banner__prev,
+.banner__next {
+  display: none;
+}
+
+.banner__d-degree {
+  position: absolute;
+  top: 204px;
+  left: 50%;
+
+  width: 72px;
+  height: 42px;
+  margin-left: -32px;
+
+  background-image: url("../img/d-degree.png");
+  background-size: 72px auto;
+
+  @include retina {
+    background-image: url("../img/d-degree@2x.png");
+  }
+}
+
+@include desktop {
+  .banner__item {
+    height: 440px;
+    padding: 40px 32px;
+
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .banner__d-degree {
+    top: 188px;
+  }
+}
+
+@include tablet {
+  .banner {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      height: 1000px;
+
+      background-color: #000000;
+      z-index: 20;
+
+      animation: banner-overlay 3s ease-in-out;
+    }
+  }
+
+  .banner__item {
+    width: 360px;
+    min-width: 360px;
+
+    &::after {
+      animation: none;
+    }
+
+    &--program {
+      order: 2;
+    }
+
+    &--split {
+      order: 1;
+    }
+
+    &--mult {
+      order: 3;
+    }
+
+    &--aircleaner {
+      order: 4;
+    }
+  }
+
+  .banner__prev,
+  .banner__next {
+    display: block;
+    width: 45px;
+    height: 45px;
+
+    z-index: 1;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+
+      width: 45px;
+      height: 45px;
+      margin-top: -22px;
+
+      background-image: url("../img/arrow-right-white.svg");
+      background-repeat: no-repeat;
+      background-size: 25px auto;
+      background-position: center;
+    }
+  }
+
+  .banner__prev {
+    left: 15px;
+
+    transform: rotate(180deg);
+  }
+
+  .banner__next {
+    right: 15px;
   }
 }

@@ -1,0 +1,81 @@
+.daichi-comfort {
+  width: 1408px;
+  margin: 0 auto;
+  min-height: 504px;
+  padding-top: 176px;
+
+  font-size: 0;
+  text-align: center;
+
+  background:
+    url("../img/app-icon.png") top 96px center/64px auto no-repeat,
+    url("../img/app-bg.jpg") center/1408px auto no-repeat;
+
+  @include retina {
+    background:
+    url("../img/app-icon@2x.png") top 96px center/64px auto no-repeat,
+    url("../img/app-bg@2x.jpg") center/1408px auto no-repeat;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  &__appstore-link {
+    @include transition;
+
+    display: inline-block;
+    width: 156px;
+    height: 56px;
+    margin-right: 16px;
+
+    background-image: url("../img/appstore.svg");
+  }
+
+  &__googleplay-link {
+    @include transition;
+
+    display: inline-block;
+    width: 165px;
+    height: 56px;
+
+    background-image: url("../img/googleplay.svg");
+  }
+
+  &__appstore-link:hover,
+  &__googleplay-link:hover {
+    opacity: 0.7;
+  }
+}
+
+@include desktop {
+  .daichi-comfort {
+    width: 960px;
+    min-height: 344px;
+    padding-top: 104px;
+
+    background:
+      url("../img/app-icon.png") top 40px center/48px auto no-repeat,
+      url("../img/app-bg.jpg") center/960px auto no-repeat;
+
+    @include retina {
+      background:
+      url("../img/app-icon@2x.png") top 40px center/48px auto no-repeat,
+      url("../img/app-bg@2x.jpg") center/960px auto no-repeat;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
