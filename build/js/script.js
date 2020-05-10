@@ -1,4 +1,39 @@
 (function () {
+  function initPreviewSwiper() {
+    return new Swiper('.aircleaner__container', {
+      freeMode: true,
+      slidesPerView: 'auto',
+    });
+  }
+
+  var slider = {};
+
+  var isTablet = function () {
+    return window.matchMedia("(max-width: 1023px)").matches;
+  };
+
+  var isOutOfTablet = !isTablet();
+
+  var onResize = function () {
+    if (isOutOfTablet && isTablet()) {
+      slider = initPreviewSwiper();
+      isOutOfTablet = false;
+    }
+
+    if (!isOutOfTablet && !isTablet()) {
+      slider.destroy(true, true);
+      isOutOfTablet = true;
+    }
+  };
+
+  if (isTablet()) {
+    slider = initPreviewSwiper();
+  }
+
+  window.addEventListener('resize', onResize);
+})();
+
+(function () {
   var slider = {};
 
   function initFreeSwiper() {
@@ -21,6 +56,10 @@
     });
   }
 
+  var isDesktop = function () {
+    return window.matchMedia("(min-width: 1024px)").matches;
+  };
+
   var isTablet = function () {
     return window.matchMedia("(min-width: 768px)").matches
       && window.matchMedia("(max-width: 1023px)").matches;
@@ -28,10 +67,12 @@
 
   var isMobile = function () {
     return window.matchMedia("(max-width: 767px)").matches;
-  }
+  };
 
   var isOutOfTablet = !isTablet();
   var isOutOfMobile = !isMobile();
+  var isOutOfDesktop = !isDesktop();
+  var isToTabletFromDesktop = isDesktop();
 
   //var slider = isTablet()
     // ? initFreeSwiper()
@@ -39,12 +80,30 @@
 
 
   var onResize = function () {
+    if (isOutOfDesktop && isDesktop()) {
+      console.log('inDesktop');
+      isOutOfDesktop = false;
+    }
+
+    if (!isOutOfDesktop && !isDesktop()) {
+      console.log('outDesktop');
+      isOutOfDesktop = true;
+    }
+
     if (isOutOfTablet && isTablet()) {
       //slider.destroy(true, true);
       //slider = initFreeSwiper();
       isOutOfTablet = false;
       console.log('inTablet');
-      slider.destroy(true, true);
+      if (!isToTabletFromDesktop) {
+        slider.destroy(true, true);
+        console.log('destroyed');
+      } else {
+        isToTabletFromDesktop = false;
+      }
+
+
+      //slider.destroy(true, true);
       slider = initFreeSwiper();
     }
 
@@ -54,6 +113,7 @@
       isOutOfTablet = true;
       console.log('outTablet');
       slider.destroy(true, true);
+      console.log('destroyed');
     }
 
     if (isOutOfMobile && isMobile()) {

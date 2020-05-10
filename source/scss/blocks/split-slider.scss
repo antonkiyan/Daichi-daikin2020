@@ -197,3 +197,40 @@
     }
   }
 }
+
+@include tablet {
+  .split-slider {
+    &__container {
+      width: 100%;
+    }
+
+    &__wrapper {
+      width: 100%;
+      // margin: 0 auto;
+    }
+
+    &__title {
+      margin-bottom: 42px;
+
+      font-size: 40px;
+      line-height: 56px;
+    }
+
+    &__item {
+      margin: 0 12px;
+    }
+
+    &__item:first-child {
+      margin-left: 24px;
+    }
+
+    &__item:last-child {
+      margin-right: 24px;
+    }
+
+    &__prev,
+    &__next {
+      display: none;
+    }
+  }
+}

@@ -55,3 +55,31 @@
     }
   }
 }
+
+@include tablet {
+  .mobile-control {
+    width: 720px;
+    min-height: auto;
+    padding: 696px 0 0;
+    margin-bottom: 46px;
+
+    background-position: top 64px center;
+    background-size: 720px auto;
+    background-image: url("../img/mobile-control-tablet.jpg");
+
+    @include retina {
+      background-image: url("../img/mobile-control-tablet@2x.jpg");
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__desc {
+      margin-bottom: 16px;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

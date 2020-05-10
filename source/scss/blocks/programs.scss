@@ -100,3 +100,44 @@
     }
   }
 }
+
+@include tablet {
+  .programs {
+    width: 720px;
+    padding: 696px 0 0;
+
+    background-size: 720px auto;
+    background-position: top 64px center;
+
+    &--my-comfort {
+      background-image: url("../img/program-1-tablet.jpg");
+
+      @include retina {
+        background-image: url("../img/program-1-tablet@2x.jpg");
+      }
+    }
+
+    &--climat-online {
+      background-image: url("../img/program-2-tablet.jpg");
+
+      @include retina {
+        background-image: url("../img/program-2-tablet@2x.jpg");
+      }
+    }
+
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__slogan {
+      margin-bottom: 16px;
+    }
+
+    &__desc {
+      margin-bottom: 16px;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

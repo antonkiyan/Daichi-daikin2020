@@ -37,6 +37,7 @@
     margin-right: 16px;
 
     background-image: url("../img/appstore.svg");
+    background-repeat: no-repeat;
   }
 
   &__googleplay-link {
@@ -47,6 +48,7 @@
     height: 56px;
 
     background-image: url("../img/googleplay.svg");
+    background-repeat: no-repeat;
   }
 
   &__appstore-link:hover,
@@ -76,6 +78,35 @@
 
       font-size: 24px;
       line-height: 32px;
+    }
+  }
+}
+
+@include tablet {
+  .daichi-comfort {
+    width: 720px;
+    min-height: 320px;
+
+    background:
+      url("../img/app-icon.png") top 40px center/48px auto no-repeat,
+      url("../img/app-bg.jpg") left calc(50% + 14px) center/893px auto no-repeat;
+
+    @include retina {
+      background:
+      url("../img/app-icon@2x.png") top 40px center/48px auto no-repeat,
+      url("../img/app-bg@2x.jpg") left calc(50% + 14px) center/893px auto no-repeat;
+    }
+
+    &__appstore-link {
+      width: 112px;
+      height: 40px;
+      background-size: 112px auto;
+    }
+
+    &__googleplay-link {
+      width: 117px;
+      height: 40px;
+      background-size: 117px auto;
     }
   }
 }

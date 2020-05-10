@@ -309,3 +309,95 @@
     }
   }
 }
+
+@include tablet {
+  .aircleaner {
+    width: 100%;
+
+    &__promo {
+      width: 720px;
+      min-height: 480px;
+      margin: 0 auto 16px;
+      padding: 40px 138px;
+
+      background-position: bottom left -178px;
+      background-size: 1072px auto;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 32px;
+    }
+
+    &__streamer {
+      width: auto;
+      margin-bottom: 24px;
+
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__benefits {
+      width: 720px;
+      min-height: auto;
+      padding: 512px 0 0;
+      margin: 0 auto 64px;
+
+      background-image: url("../img/aircleaner-benefits-tablet.jpg");
+      background-size: 720px auto;
+
+      @include retina {
+        background-image: url("../img/aircleaner-benefits-tablet@2x.jpg");
+      }
+    }
+
+    &__desc {
+      padding-right: 60px;
+    }
+
+    &__benefits-list {
+      padding-right: 100px;
+    }
+
+    &__stages {
+      margin-bottom: 48px;
+    }
+
+    &__stages-list {
+      flex-wrap: nowrap;
+    }
+
+    &__stages-item {
+      width: 240px;
+      margin: 0 20px;
+
+      &:first-child {
+        margin-left: 24px;
+      }
+
+      &:last-child {
+        margin-right: 24px;
+      }
+    }
+
+    &__stages-name {
+      margin-bottom: 8px;
+
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__footer {
+      width: 720px;
+      margin: 0 auto;
+
+      background-image: url("../img/aircleaner-footer-tablet.jpg");
+      background-size: 720px auto;
+      background-position: top center;
+
+      @include retina {
+        background-color: url("../img/aircleaner-footer-tablet@2x.jpg");
+      }
+    }
+  }
+}

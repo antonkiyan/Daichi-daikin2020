@@ -169,3 +169,20 @@
     }
   }
 }
+
+@include mobile {
+  .page-header {
+    padding-bottom: 48px;
+
+    &__bar {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-bottom: 48px;
+    }
+
+    &__title {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+}

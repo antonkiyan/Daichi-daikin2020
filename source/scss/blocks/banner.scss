@@ -199,7 +199,7 @@
       top: 0;
       right: 0;
 
-      height: 1000px;
+      height: 5000px;
 
       background-color: #000000;
       z-index: 20;
@@ -211,6 +211,13 @@
   .banner__item {
     width: 360px;
     min-width: 360px;
+    padding: 40px 48px;
+
+    font-size: 32px;
+    line-height: 36px;
+
+    background-position: top center;
+    background-size: 400px auto;
 
     &::after {
       animation: none;
@@ -270,5 +277,11 @@
 
   .banner__next {
     right: 15px;
+  }
+}
+
+@include mobile {
+  .banner__item {
+    height: 100vw;
   }
 }

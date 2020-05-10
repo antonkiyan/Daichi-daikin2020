@@ -84,3 +84,19 @@
     }
   }
 }
+
+@include tablet {
+  .page-footer {
+    min-height: 352px;
+    padding-top: 117px;
+
+    &__contact {
+      width: 274px;
+      margin-right: 96px;
+    }
+
+    &__to-dealers {
+      width: 270px;
+    }
+  }
+}

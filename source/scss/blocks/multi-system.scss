@@ -173,3 +173,65 @@
     }
   }
 }
+
+@include tablet {
+  .multi-system {
+    padding-top: 62px;
+
+    &__desc {
+      margin-bottom: 64px;
+      padding: 0 calc((100% - 486px)/2);
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__model {
+      width: 352px;
+      min-height: 400px;
+      padding: 40px 35px;
+    }
+
+    &__model--mxm {
+      margin-right: 24px;
+      background-size: 308px auto;
+      background-position: top 260px left 26px;
+    }
+
+    &__model--mxs {
+      background-size: 286px auto;
+      background-position: top 266px left 33px;
+    }
+
+    &__model-title {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__name {
+      margin-bottom: 24px;
+
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__select {
+      min-height: 720px;
+
+      background-image: url("../img/multi-bg-tablet.jpg");
+      background-size: 1060px auto;
+      background-position: top left;
+
+      @include retina {
+        background-image: url("../img/multi-bg-tablet@2x.jpg");
+      }
+    }
+
+    &__select-desc {
+      padding: 0 25px;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

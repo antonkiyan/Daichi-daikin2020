@@ -1242,6 +1242,13 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .page-header__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .page-header__bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1362,6 +1369,21 @@ a {
   }
   .page-header__nav-button:active, .page-header__nav-button:focus {
     outline: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-header {
+    padding-bottom: 48px;
+  }
+  .page-header__bar {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 48px;
+  }
+  .page-header__title {
+    font-size: 28px;
+    line-height: 32px;
   }
 }
 
@@ -1669,7 +1691,7 @@ a {
     position: absolute;
     top: 0;
     right: 0;
-    height: 1000px;
+    height: 5000px;
     background-color: #000000;
     z-index: 20;
     -webkit-animation: banner-overlay 3s ease-in-out;
@@ -1678,6 +1700,11 @@ a {
   .banner__item {
     width: 360px;
     min-width: 360px;
+    padding: 40px 48px;
+    font-size: 32px;
+    line-height: 36px;
+    background-position: top center;
+    background-size: 400px auto;
   }
   .banner__item::after {
     -webkit-animation: none;
@@ -1734,6 +1761,12 @@ a {
   }
   .banner__next {
     right: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner__item {
+    height: 100vw;
   }
 }
 
@@ -1981,6 +2014,76 @@ a {
   }
 }
 
+@media (max-width: 1023px) {
+  .split-cards {
+    width: 720px;
+    padding-top: 64px;
+    padding-bottom: 48px;
+  }
+  .split-cards__item {
+    width: 352px;
+    min-height: 400px;
+    margin-bottom: 16px;
+    padding: 24px 50px;
+  }
+  .split-cards__item:first-child {
+    min-height: 376px;
+    padding: 64px 418px 64px 50px;
+    background-size: 378px auto;
+    background-position: top 45px right -10px;
+  }
+  .split-cards__item:nth-child(2) {
+    background-size: 204px auto;
+    background-position: top 144px center;
+  }
+  .split-cards__item:nth-child(3) {
+    background-size: 204px auto;
+    background-position: top 144px center;
+  }
+  .split-cards__item:nth-child(4) {
+    background-size: 204px auto;
+    background-position: top 167px center;
+  }
+  .split-cards__item:nth-child(5) {
+    background-size: 204px auto;
+    background-position: top 167px center;
+  }
+  .split-cards__item:nth-child(6) {
+    background-size: 244px auto;
+    background-position: top 144px center;
+  }
+  .split-cards__item:nth-child(7) {
+    background-size: 246px auto;
+    background-position: top 144px center;
+  }
+  .split-cards__name {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .split-cards__name--main {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .split-cards__desc {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .split-cards__desc--main {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .split-cards__price {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .split-cards__price--main {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
 .split-slider {
   position: relative;
   padding-top: 104px;
@@ -2165,6 +2268,32 @@ a {
   }
 }
 
+@media (max-width: 1023px) {
+  .split-slider__container {
+    width: 100%;
+  }
+  .split-slider__wrapper {
+    width: 100%;
+  }
+  .split-slider__title {
+    margin-bottom: 42px;
+    font-size: 40px;
+    line-height: 56px;
+  }
+  .split-slider__item {
+    margin: 0 12px;
+  }
+  .split-slider__item:first-child {
+    margin-left: 24px;
+  }
+  .split-slider__item:last-child {
+    margin-right: 24px;
+  }
+  .split-slider__prev, .split-slider__next {
+    display: none;
+  }
+}
+
 .programs {
   width: 1408px;
   background-repeat: no-repeat;
@@ -2269,6 +2398,50 @@ a {
   }
 }
 
+@media (max-width: 1023px) {
+  .programs {
+    width: 720px;
+    padding: 696px 0 0;
+    background-size: 720px auto;
+    background-position: top 64px center;
+  }
+  .programs--my-comfort {
+    background-image: url("../img/program-1-tablet.jpg");
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .programs--my-comfort {
+    background-image: url("../img/program-1-tablet@2x.jpg");
+  }
+}
+
+@media (max-width: 1023px) {
+  .programs--climat-online {
+    background-image: url("../img/program-2-tablet.jpg");
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .programs--climat-online {
+    background-image: url("../img/program-2-tablet@2x.jpg");
+  }
+}
+
+@media (max-width: 1023px) {
+  .programs__title {
+    margin-bottom: 8px;
+  }
+  .programs__slogan {
+    margin-bottom: 16px;
+  }
+  .programs__desc {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 .mobile-control {
   width: 1408px;
   min-height: 720px;
@@ -2329,6 +2502,35 @@ a {
   }
 }
 
+@media (max-width: 1023px) {
+  .mobile-control {
+    width: 720px;
+    min-height: auto;
+    padding: 696px 0 0;
+    margin-bottom: 46px;
+    background-position: top 64px center;
+    background-size: 720px auto;
+    background-image: url("../img/mobile-control-tablet.jpg");
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .mobile-control {
+    background-image: url("../img/mobile-control-tablet@2x.jpg");
+  }
+}
+
+@media (max-width: 1023px) {
+  .mobile-control__title {
+    margin-bottom: 16px;
+  }
+  .mobile-control__desc {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 .daichi-comfort {
   width: 1408px;
   margin: 0 auto;
@@ -2363,6 +2565,7 @@ a {
   height: 56px;
   margin-right: 16px;
   background-image: url("../img/appstore.svg");
+  background-repeat: no-repeat;
 }
 
 .daichi-comfort__googleplay-link {
@@ -2372,6 +2575,7 @@ a {
   width: 165px;
   height: 56px;
   background-image: url("../img/googleplay.svg");
+  background-repeat: no-repeat;
 }
 
 .daichi-comfort__appstore-link:hover, .daichi-comfort__googleplay-link:hover {
@@ -2398,6 +2602,33 @@ a {
     margin-bottom: 16px;
     font-size: 24px;
     line-height: 32px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .daichi-comfort {
+    width: 720px;
+    min-height: 320px;
+    background: url("../img/app-icon.png") top 40px center/48px auto no-repeat, url("../img/app-bg.jpg") left calc(50% + 14px) center/893px auto no-repeat;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .daichi-comfort {
+    background: url("../img/app-icon@2x.png") top 40px center/48px auto no-repeat, url("../img/app-bg@2x.jpg") left calc(50% + 14px) center/893px auto no-repeat;
+  }
+}
+
+@media (max-width: 1023px) {
+  .daichi-comfort__appstore-link {
+    width: 112px;
+    height: 40px;
+    background-size: 112px auto;
+  }
+  .daichi-comfort__googleplay-link {
+    width: 117px;
+    height: 40px;
+    background-size: 117px auto;
   }
 }
 
@@ -2570,6 +2801,61 @@ a {
 @media (max-width: 1599px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1599px) and (min-resolution: 144dpi), (max-width: 1599px) and (min-resolution: 1.5dppx) {
   .multi-system__select {
     background-image: url("../img/multi-bg-desktop@2x.jpg");
+  }
+}
+
+@media (max-width: 1023px) {
+  .multi-system {
+    padding-top: 62px;
+  }
+  .multi-system__desc {
+    margin-bottom: 64px;
+    padding: 0 calc((100% - 486px)/2);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .multi-system__model {
+    width: 352px;
+    min-height: 400px;
+    padding: 40px 35px;
+  }
+  .multi-system__model--mxm {
+    margin-right: 24px;
+    background-size: 308px auto;
+    background-position: top 260px left 26px;
+  }
+  .multi-system__model--mxs {
+    background-size: 286px auto;
+    background-position: top 266px left 33px;
+  }
+  .multi-system__model-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .multi-system__name {
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .multi-system__select {
+    min-height: 720px;
+    background-image: url("../img/multi-bg-tablet.jpg");
+    background-size: 1060px auto;
+    background-position: top left;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .multi-system__select {
+    background-image: url("../img/multi-bg-tablet@2x.jpg");
+  }
+}
+
+@media (max-width: 1023px) {
+  .multi-system__select-desc {
+    padding: 0 25px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -2883,6 +3169,88 @@ a {
   }
 }
 
+@media (max-width: 1023px) {
+  .aircleaner {
+    width: 100%;
+  }
+  .aircleaner__promo {
+    width: 720px;
+    min-height: 480px;
+    margin: 0 auto 16px;
+    padding: 40px 138px;
+    background-position: bottom left -178px;
+    background-size: 1072px auto;
+  }
+  .aircleaner__title {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .aircleaner__streamer {
+    width: auto;
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .aircleaner__benefits {
+    width: 720px;
+    min-height: auto;
+    padding: 512px 0 0;
+    margin: 0 auto 64px;
+    background-image: url("../img/aircleaner-benefits-tablet.jpg");
+    background-size: 720px auto;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .aircleaner__benefits {
+    background-image: url("../img/aircleaner-benefits-tablet@2x.jpg");
+  }
+}
+
+@media (max-width: 1023px) {
+  .aircleaner__desc {
+    padding-right: 60px;
+  }
+  .aircleaner__benefits-list {
+    padding-right: 100px;
+  }
+  .aircleaner__stages {
+    margin-bottom: 48px;
+  }
+  .aircleaner__stages-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .aircleaner__stages-item {
+    width: 240px;
+    margin: 0 20px;
+  }
+  .aircleaner__stages-item:first-child {
+    margin-left: 24px;
+  }
+  .aircleaner__stages-item:last-child {
+    margin-right: 24px;
+  }
+  .aircleaner__stages-name {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .aircleaner__footer {
+    width: 720px;
+    margin: 0 auto;
+    background-image: url("../img/aircleaner-footer-tablet.jpg");
+    background-size: 720px auto;
+    background-position: top center;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .aircleaner__footer {
+    background-color: url("../img/aircleaner-footer-tablet@2x.jpg");
+  }
+}
+
 .page-footer {
   position: relative;
   display: -webkit-box;
@@ -2960,6 +3328,20 @@ a {
   }
   .page-footer__to-dealers-title {
     margin-bottom: 33px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .page-footer {
+    min-height: 352px;
+    padding-top: 117px;
+  }
+  .page-footer__contact {
+    width: 274px;
+    margin-right: 96px;
+  }
+  .page-footer__to-dealers {
+    width: 270px;
   }
 }
 

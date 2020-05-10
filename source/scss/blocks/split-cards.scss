@@ -170,3 +170,90 @@
     }
   }
 }
+
+@include tablet {
+  .split-cards {
+    width: 720px;
+    padding-top: 64px;
+    padding-bottom: 48px;
+
+    &__item {
+      width: 352px;
+      min-height: 400px;
+      margin-bottom: 16px;
+      padding: 24px 50px;
+    }
+
+    &__item:first-child {
+      min-height: 376px;
+      padding: 64px 418px 64px 50px;
+
+      background-size: 378px auto;
+      background-position: top 45px right -10px;
+    }
+
+    &__item:nth-child(2) {
+      background-size: 204px auto;
+      background-position: top 144px center;
+    }
+
+    &__item:nth-child(3) {
+      background-size: 204px auto;
+      background-position: top 144px center;
+    }
+
+    &__item:nth-child(4) {
+      background-size: 204px auto;
+      background-position: top 167px center;
+    }
+
+    &__item:nth-child(5) {
+      background-size: 204px auto;
+      background-position: top 167px center;
+    }
+
+    &__item:nth-child(6) {
+      background-size: 244px auto;
+      background-position: top 144px center;
+    }
+
+    &__item:nth-child(7) {
+      background-size: 246px auto;
+      background-position: top 144px center;
+    }
+
+    &__name {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__name--main {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    &__desc {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__desc--main {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__price {
+      margin-bottom: 16px;
+
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__price--main {
+      margin-bottom: 24px;
+
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+}
