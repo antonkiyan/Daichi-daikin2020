@@ -94,7 +94,6 @@
     margin-bottom: 20px;
   }
 
-
   &__stages-title {
     margin: 0;
     margin-bottom: 88px;
@@ -203,7 +202,7 @@
     background-size: 1408px auto;
 
     @include retina {
-      background-color: url("../img/aircleaner-footer@2x.jpg");
+      background-image: url("../img/aircleaner-footer@2x.jpg");
     }
   }
 
@@ -295,7 +294,7 @@
       background-size: 960px auto;
 
       @include retina {
-        background-color: url("../img/aircleaner-footer-desktop@2x.jpg");
+        background-image: url("../img/aircleaner-footer-desktop@2x.jpg");
       }
     }
 
@@ -363,6 +362,11 @@
       margin-bottom: 48px;
     }
 
+    &__stages-title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
     &__stages-list {
       flex-wrap: nowrap;
     }
@@ -370,6 +374,10 @@
     &__stages-item {
       width: 240px;
       margin: 0 20px;
+
+      &:not(:nth-child(3n)) {
+        margin-right: 20px;
+      }
 
       &:first-child {
         margin-left: 24px;
@@ -396,8 +404,135 @@
       background-position: top center;
 
       @include retina {
-        background-color: url("../img/aircleaner-footer-tablet@2x.jpg");
+        background-image: url("../img/aircleaner-footer-tablet@2x.jpg");
       }
+    }
+  }
+}
+
+@include mobile {
+  .aircleaner {
+    margin-bottom: 0;
+    padding-top: 56px;
+
+    &__promo {
+      width: 90%;
+      padding: 24px 17px;
+
+      background-position: bottom -50px left calc(50% - 217px);
+      background-size: 1200px auto;
+    }
+
+    &__title {
+      line-height: 24px;
+    }
+
+    &__streamer {
+      width: 272px;
+      margin: 0 auto 24px;
+
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__price {
+      margin-bottom: 31px;
+
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__buy-link {
+      margin-right: 12px;
+    }
+
+    &__benefits {
+      width: 90%;
+      padding: calc(105% + 24px) 0 0;
+      margin: 0 auto 56px;
+
+      background-image: url("../img/aircleaner-benefits-desktop@2x.jpg");
+      background-size: 100% auto;
+    }
+
+    &__desc {
+      padding-right: 0;
+      margin-bottom: 24px;
+
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__benefits-list {
+      padding-right: 0;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__benefits-list li {
+      margin-bottom: 16px;
+    }
+
+    &__stages {
+      margin-bottom: 28px;
+    }
+
+    &__stages-title {
+      width: 80%;
+      margin: 0 auto 24px;
+
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__stages-item {
+      margin: 0 12px;
+
+      &:not(:nth-child(3n)) {
+        margin-right: 12px;
+      }
+
+      &:first-child {
+        margin-left: 5%;
+      }
+
+      &:last-child {
+        margin-right: 5%;
+      }
+    }
+
+    &__stages-desc {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &__footer {
+      width: 100%;
+      min-height: 320px;
+      padding: 56px 30px 48px;
+
+      background-image: url("../img/aircleaner-footer-mobile.jpg");
+      background-size: cover;
+      background-position: top right;
+
+      @include retina {
+        background-image: url("../img/aircleaner-footer-mobile@2x.jpg");
+      }
+    }
+
+    &__footer-name {
+      margin-bottom: 56px;
+
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__footer-price {
+      margin-bottom: 24px;
+
+      font-size: 18px;
+      line-height: 24px;
     }
   }
 }

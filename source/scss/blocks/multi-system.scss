@@ -235,3 +235,78 @@
     }
   }
 }
+
+@include mobile {
+  .multi-system {
+    padding-top: 58px;
+
+    &__title {
+      margin-bottom: 16px;
+      padding: 0 5%;
+
+      font-size: 24px;
+      line-height: 48px;
+      text-align: left;
+    }
+
+    &__desc {
+      padding: 0 5%;
+      margin-bottom: 40px;
+
+      text-align: left;
+    }
+
+    &__model {
+      width: 90%;
+      min-height: 320px;
+      padding: 24px 40px;
+      margin: 0 5% 16px;;
+    }
+
+    &__model--mxm {
+      background-size: 240px auto;
+      background-position: top 210px left calc(50% + 5px);
+    }
+
+    &__model--mxs {
+      background-size: 209px auto;
+      background-position: top 214px left 50%;
+    }
+
+    &__model-title {
+      margin-bottom: 6px;
+    }
+
+    &__name {
+      margin-bottom: 18px;
+    }
+
+    &__price {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__select {
+      min-height: auto;
+      padding-top: 32px;
+      padding-bottom: 264px;
+
+      background-size: 756px auto;
+      background-position: bottom -100px left;
+      background-color: #eff0f2;
+    }
+
+    &__select-title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__select-desc {
+      padding: 0 5%;
+      width: auto;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

@@ -110,3 +110,26 @@
     }
   }
 }
+
+@include mobile {
+  .daichi-comfort {
+    width: 100%;
+    min-height: 360px;
+    padding-top: 96px;
+
+    background:
+      url("../img/app-icon.png") top 32px center/48px auto no-repeat,
+      url("../img/app-bg-mobile.jpg") left calc(50% + 14px) top -10px /auto 421px no-repeat;
+
+    @include retina {
+      background:
+      url("../img/app-icon@2x.png") top 32px center/48px auto no-repeat,
+      url("../img/app-bg-mobile@2x.jpg") left calc(50% + 14px) top -10px /auto 421px no-repeat;
+    }
+
+    &__title {
+      width: 240px;
+      margin: 0 auto 17px;
+    }
+  }
+}

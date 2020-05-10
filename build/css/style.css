@@ -1244,8 +1244,8 @@ a {
 
 @media (max-width: 767px) {
   .page-header__container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -1380,6 +1380,10 @@ a {
     padding-top: 12px;
     padding-bottom: 12px;
     margin-bottom: 48px;
+  }
+  .page-header__logo {
+    width: 86px;
+    height: 20px;
   }
   .page-header__title {
     font-size: 28px;
@@ -1691,7 +1695,7 @@ a {
     position: absolute;
     top: 0;
     right: 0;
-    height: 5000px;
+    height: 100%;
     background-color: #000000;
     z-index: 20;
     -webkit-animation: banner-overlay 3s ease-in-out;
@@ -1705,6 +1709,9 @@ a {
     line-height: 36px;
     background-position: top center;
     background-size: 400px auto;
+  }
+  .banner__item:hover::before {
+    opacity: 5%;
   }
   .banner__item::after {
     -webkit-animation: none;
@@ -1767,6 +1774,39 @@ a {
 @media (max-width: 767px) {
   .banner__item {
     height: 100vw;
+    max-height: 440px;
+    width: 100%;
+    min-width: 100%;
+    padding: 23px 5%;
+    font-size: 24px;
+    line-height: 28px;
+    background-size: cover;
+    background-position: bottom right;
+  }
+  .banner__item--split {
+    background-image: url("../img/banner-split@2x.jpg");
+  }
+  .banner__item--program {
+    background-position: center right;
+    background-image: url("../img/banner-program@2x.jpg");
+  }
+  .banner__item--mult {
+    background-position: center right;
+    background-image: url("../img/banner-mult@2x.jpg");
+  }
+  .banner__item--aircleaner {
+    background-position: center right;
+    background-image: url("../img/banner-aircleaner@2x.jpg");
+  }
+  .banner__prev {
+    left: 1.9%;
+  }
+  .banner__next {
+    right: 1.9%;
+  }
+  .banner__d-degree {
+    top: 50%;
+    margin-top: -50px;
   }
 }
 
@@ -2084,6 +2124,56 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .split-cards {
+    width: 90%;
+    padding: 56px 0 40px;
+  }
+  .split-cards__item {
+    width: 100%;
+    padding: 24px 18px;
+  }
+  .split-cards__item:nth-child(n) {
+    margin-right: 0;
+  }
+  .split-cards__item:first-child {
+    min-height: 400px;
+    padding: 24px 18px;
+    background-size: 204px auto;
+    background-position: top 144px center;
+    background-image: url("../img/ftxb-rxb.png");
+  }
+  .split-cards__item:nth-child(4) {
+    min-height: 424px;
+    background-size: 242px auto;
+    background-position: bottom 120px center;
+  }
+  .split-cards__item:nth-child(5) {
+    background-size: 242px auto;
+    background-position: bottom 120px center;
+  }
+  .split-cards__item:nth-child(6) .split-cards__desc {
+    padding: 0 50px;
+  }
+  .split-cards__name {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .split-cards__desc {
+    width: 253px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .split-cards__price {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .split-cards__bottom .split-cards__buy-link {
+    margin-right: 12px;
+  }
+}
+
 .split-slider {
   position: relative;
   padding-top: 104px;
@@ -2294,6 +2384,24 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .split-slider {
+    padding-top: 32px;
+    padding-bottom: 56px;
+  }
+  .split-slider__title {
+    margin-bottom: 18px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .split-slider__item:first-child {
+    margin-left: 16px;
+  }
+  .split-slider__item:last-child {
+    margin-right: 16px;
+  }
+}
+
 .programs {
   width: 1408px;
   background-repeat: no-repeat;
@@ -2442,6 +2550,31 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .programs {
+    width: 100%;
+    padding: calc(75% + 72px) 5% 0;
+    background-size: 90% auto;
+    background-position: top 56px center;
+  }
+  .programs__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .programs__slogan {
+    font-size: 23px;
+    line-height: 30px;
+  }
+  .programs__desc {
+    margin-bottom: 8px;
+  }
+  .programs--my-comfort .programs__link::before,
+  .programs--climat-online .programs__link::before {
+    top: auto;
+    bottom: 4px;
+  }
+}
+
 .mobile-control {
   width: 1408px;
   min-height: 720px;
@@ -2528,6 +2661,23 @@ a {
     margin-bottom: 16px;
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-control {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: calc(75% + 56px) 5% 0;
+    background-size: 90% auto;
+    background-position: top 40px center;
+  }
+  .mobile-control__title {
+    font-size: 23px;
+    line-height: 30px;
+  }
+  .mobile-control__desc {
+    margin-bottom: 8px;
   }
 }
 
@@ -2629,6 +2779,28 @@ a {
     width: 117px;
     height: 40px;
     background-size: 117px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .daichi-comfort {
+    width: 100%;
+    min-height: 360px;
+    padding-top: 96px;
+    background: url("../img/app-icon.png") top 32px center/48px auto no-repeat, url("../img/app-bg-mobile.jpg") left calc(50% + 14px) top -10px/auto 421px no-repeat;
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .daichi-comfort {
+    background: url("../img/app-icon@2x.png") top 32px center/48px auto no-repeat, url("../img/app-bg-mobile@2x.jpg") left calc(50% + 14px) top -10px/auto 421px no-repeat;
+  }
+}
+
+@media (max-width: 767px) {
+  .daichi-comfort__title {
+    width: 240px;
+    margin: 0 auto 17px;
   }
 }
 
@@ -2859,6 +3031,66 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .multi-system {
+    padding-top: 58px;
+  }
+  .multi-system__title {
+    margin-bottom: 16px;
+    padding: 0 5%;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: left;
+  }
+  .multi-system__desc {
+    padding: 0 5%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .multi-system__model {
+    width: 90%;
+    min-height: 320px;
+    padding: 24px 40px;
+    margin: 0 5% 16px;
+  }
+  .multi-system__model--mxm {
+    background-size: 240px auto;
+    background-position: top 210px left calc(50% + 5px);
+  }
+  .multi-system__model--mxs {
+    background-size: 209px auto;
+    background-position: top 214px left 50%;
+  }
+  .multi-system__model-title {
+    margin-bottom: 6px;
+  }
+  .multi-system__name {
+    margin-bottom: 18px;
+  }
+  .multi-system__price {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .multi-system__select {
+    min-height: auto;
+    padding-top: 32px;
+    padding-bottom: 264px;
+    background-size: 756px auto;
+    background-position: bottom -100px left;
+    background-color: #eff0f2;
+  }
+  .multi-system__select-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .multi-system__select-desc {
+    padding: 0 5%;
+    width: auto;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 .aircleaner {
   width: 1408px;
   margin: 0 auto 96px;
@@ -3071,7 +3303,7 @@ a {
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .aircleaner__footer {
-    background-color: url("../img/aircleaner-footer@2x.jpg");
+    background-image: url("../img/aircleaner-footer@2x.jpg");
   }
 }
 
@@ -3155,7 +3387,7 @@ a {
 
 @media (max-width: 1599px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1599px) and (min-resolution: 144dpi), (max-width: 1599px) and (min-resolution: 1.5dppx) {
   .aircleaner__footer {
-    background-color: url("../img/aircleaner-footer-desktop@2x.jpg");
+    background-image: url("../img/aircleaner-footer-desktop@2x.jpg");
   }
 }
 
@@ -3217,6 +3449,10 @@ a {
   .aircleaner__stages {
     margin-bottom: 48px;
   }
+  .aircleaner__stages-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
   .aircleaner__stages-list {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -3224,6 +3460,9 @@ a {
   .aircleaner__stages-item {
     width: 240px;
     margin: 0 20px;
+  }
+  .aircleaner__stages-item:not(:nth-child(3n)) {
+    margin-right: 20px;
   }
   .aircleaner__stages-item:first-child {
     margin-left: 24px;
@@ -3247,7 +3486,110 @@ a {
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .aircleaner__footer {
-    background-color: url("../img/aircleaner-footer-tablet@2x.jpg");
+    background-image: url("../img/aircleaner-footer-tablet@2x.jpg");
+  }
+}
+
+@media (max-width: 767px) {
+  .aircleaner {
+    margin-bottom: 0;
+    padding-top: 56px;
+  }
+  .aircleaner__promo {
+    width: 90%;
+    padding: 24px 17px;
+    background-position: bottom -50px left calc(50% - 217px);
+    background-size: 1200px auto;
+  }
+  .aircleaner__title {
+    line-height: 24px;
+  }
+  .aircleaner__streamer {
+    width: 272px;
+    margin: 0 auto 24px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .aircleaner__price {
+    margin-bottom: 31px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .aircleaner__buy-link {
+    margin-right: 12px;
+  }
+  .aircleaner__benefits {
+    width: 90%;
+    padding: calc(105% + 24px) 0 0;
+    margin: 0 auto 56px;
+    background-image: url("../img/aircleaner-benefits-desktop@2x.jpg");
+    background-size: 100% auto;
+  }
+  .aircleaner__desc {
+    padding-right: 0;
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .aircleaner__benefits-list {
+    padding-right: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .aircleaner__benefits-list li {
+    margin-bottom: 16px;
+  }
+  .aircleaner__stages {
+    margin-bottom: 28px;
+  }
+  .aircleaner__stages-title {
+    width: 80%;
+    margin: 0 auto 24px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .aircleaner__stages-item {
+    margin: 0 12px;
+  }
+  .aircleaner__stages-item:not(:nth-child(3n)) {
+    margin-right: 12px;
+  }
+  .aircleaner__stages-item:first-child {
+    margin-left: 5%;
+  }
+  .aircleaner__stages-item:last-child {
+    margin-right: 5%;
+  }
+  .aircleaner__stages-desc {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .aircleaner__footer {
+    width: 100%;
+    min-height: 320px;
+    padding: 56px 30px 48px;
+    background-image: url("../img/aircleaner-footer-mobile.jpg");
+    background-size: cover;
+    background-position: top right;
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .aircleaner__footer {
+    background-image: url("../img/aircleaner-footer-mobile@2x.jpg");
+  }
+}
+
+@media (max-width: 767px) {
+  .aircleaner__footer-name {
+    margin-bottom: 56px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .aircleaner__footer-price {
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -3345,6 +3687,39 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .page-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 72px;
+    padding-bottom: 80px;
+  }
+  .page-footer::before {
+    top: calc(50% - 12px);
+    width: 75%;
+    height: 1px;
+    margin-left: -37.5%;
+  }
+  .page-footer__contact {
+    margin: 0 auto 80px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .page-footer__to-dealers {
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .page-footer__to-dealers-title {
+    margin-bottom: 16px;
+  }
+  .page-footer__to-dealers-link {
+    width: 200px;
+  }
+}
+
 .mobile-nav__content {
   display: none;
 }
@@ -3422,5 +3797,28 @@ a {
   .mobile-nav.js--show .mobile-nav__underlayer {
     visibility: visible;
     opacity: 0.5;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-nav__content {
+    width: 256px;
+  }
+  .mobile-nav__logo {
+    width: 86px;
+    height: 20px;
+    margin-bottom: 48px;
+  }
+  .mobile-nav__item {
+    margin-bottom: 16px;
+  }
+  .mobile-nav__link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .mobile-nav__contact {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 26px;
   }
 }

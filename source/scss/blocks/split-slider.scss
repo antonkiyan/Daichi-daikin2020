@@ -234,3 +234,25 @@
     }
   }
 }
+
+@include mobile {
+  .split-slider {
+    padding-top: 32px;
+    padding-bottom: 56px;
+
+    &__title {
+      margin-bottom: 18px;
+
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__item:first-child {
+      margin-left: 16px;
+    }
+
+    &__item:last-child {
+      margin-right: 16px;
+    }
+  }
+}

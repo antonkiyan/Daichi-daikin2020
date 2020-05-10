@@ -141,3 +141,35 @@
     }
   }
 }
+
+@include mobile {
+  .programs {
+    width: 100%;
+    padding: calc(75% + 72px) 5% 0;
+
+    background-size: 90% auto;
+    background-position: top 56px center;
+
+    &__title {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__slogan {
+      font-size: 23px;
+      line-height: 30px;
+    }
+
+    &__desc {
+      margin-bottom: 8px;
+    }
+  }
+
+  .programs--my-comfort .programs__link,
+  .programs--climat-online .programs__link {
+    &::before {
+      top: auto;
+      bottom: 4px;
+    }
+  }
+}

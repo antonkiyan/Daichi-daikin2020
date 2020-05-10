@@ -199,7 +199,7 @@
       top: 0;
       right: 0;
 
-      height: 5000px;
+      height: 100%;
 
       background-color: #000000;
       z-index: 20;
@@ -218,6 +218,10 @@
 
     background-position: top center;
     background-size: 400px auto;
+
+    &:hover::before {
+      opacity: 5%;
+    }
 
     &::after {
       animation: none;
@@ -283,5 +287,48 @@
 @include mobile {
   .banner__item {
     height: 100vw;
+    max-height: 440px;
+    width: 100%;
+    min-width: 100%;
+    padding: 23px 5%;
+
+    font-size: 24px;
+    line-height: 28px;
+
+    background-size: cover;
+    background-position: bottom right;
+
+    &--split {
+      background-image: url("../img/banner-split@2x.jpg")
+    }
+
+    &--program {
+      background-position: center right;
+      background-image: url("../img/banner-program@2x.jpg")
+    }
+
+    &--mult {
+      background-position: center right;
+      background-image: url("../img/banner-mult@2x.jpg")
+    }
+
+    &--aircleaner {
+      background-position: center right;
+      background-image: url("../img/banner-aircleaner@2x.jpg")
+    }
+  }
+
+  .banner__prev {
+    left: 1.9%;
+  }
+
+  .banner__next {
+    right: 1.9%;
+  }
+
+  .banner__d-degree {
+    top: 50%;
+
+    margin-top: -50px
   }
 }

@@ -100,3 +100,41 @@
     }
   }
 }
+
+@include mobile {
+  .page-footer {
+    flex-direction: column;
+    padding-top: 72px;
+    padding-bottom: 80px;
+
+    &::before {
+      top: calc(50% - 12px);
+
+      width: 75%;
+      height: 1px;
+      margin-left: -37.5%;
+    }
+
+    &__contact {
+      margin: 0 auto 80px;
+
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__to-dealers {
+      margin: 0 auto;
+
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__to-dealers-title {
+      margin-bottom: 16px;
+    }
+
+    &__to-dealers-link {
+      width: 200px;
+    }
+  }
+}

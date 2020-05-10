@@ -83,3 +83,23 @@
     }
   }
 }
+
+@include mobile {
+  .mobile-control {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: calc(75% + 56px) 5% 0;
+
+    background-size: 90% auto;
+    background-position: top 40px center;
+
+    &__title {
+      font-size: 23px;
+      line-height: 30px;
+    }
+
+    &__desc {
+      margin-bottom: 8px;
+    }
+  }
+}
