@@ -16,6 +16,11 @@
   let scrollClimatOnlineLinkMobile = document.querySelector(`.js-scroll-climat-online-mobile`);
   let scrollMobileControlLinkMobile = document.querySelector(`.js-scroll-mobile-control-mobile`);
 
+  let scrollSplitLinkBanner = document.querySelector(`.js-scroll-split-banner`);
+  let scrollMultLinkBanner = document.querySelector(`.js-scroll-mult-banner`);
+  let scrollAircleanerLinkBanner = document.querySelector(`.js-scroll-aircleaner-banner`);
+  let scrollProgramLinkBanner = document.querySelector(`.js-scroll-program-banner`);
+
   let handleAnchorClick = function () {
     event.preventDefault();
     let linkTarget = event.currentTarget.getAttribute(`href`);
@@ -53,4 +58,9 @@
   scrollMyComfortLinkMobile.addEventListener(`click`, handleAnchorClickMobile);
   scrollClimatOnlineLinkMobile.addEventListener(`click`, handleAnchorClickMobile);
   scrollMobileControlLinkMobile.addEventListener(`click`, handleAnchorClickMobile);
+
+  scrollSplitLinkBanner.addEventListener(`click`, handleAnchorClick);
+  scrollMultLinkBanner.addEventListener(`click`, handleAnchorClick);
+  scrollAircleanerLinkBanner.addEventListener(`click`, handleAnchorClick);
+  scrollProgramLinkBanner.addEventListener(`click`, handleAnchorClick);
 })();

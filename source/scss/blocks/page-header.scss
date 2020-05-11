@@ -23,6 +23,9 @@
 .page-header {
   position: relative;
 
+  min-height: 424px;
+  max-height: 600px;
+  height: calc(100vh - 472px);
   padding-bottom: 112px;
 
   &__container {
@@ -109,6 +112,9 @@
 @include desktop {
   .page-header {
     padding-bottom: 80px;
+    min-height: auto;
+    max-height: auto;
+    height: auto;
 
     &__bar {
       padding-top: 31px;
