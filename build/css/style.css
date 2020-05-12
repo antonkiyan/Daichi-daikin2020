@@ -1155,8 +1155,13 @@ a {
   border-bottom: none;
 }
 
-@-webkit-keyframes title {
+@-webkit-keyframes title-1 {
   0% {
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+    color: #ffffff;
+  }
+  20% {
     -webkit-transform: translateY(70px);
             transform: translateY(70px);
     color: #ffffff;
@@ -1165,16 +1170,24 @@ a {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  99% {
+  89% {
     color: #ffffff;
+  }
+  90% {
+    color: #000000;
   }
   100% {
     color: #000000;
   }
 }
 
-@keyframes title {
+@keyframes title-1 {
   0% {
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+    color: #ffffff;
+  }
+  20% {
     -webkit-transform: translateY(70px);
             transform: translateY(70px);
     color: #ffffff;
@@ -1183,19 +1196,89 @@ a {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  99% {
+  89% {
     color: #ffffff;
+  }
+  90% {
+    color: #000000;
   }
   100% {
     color: #000000;
   }
 }
 
-@-webkit-keyframes overlay {
+@-webkit-keyframes title-2 {
+  0% {
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+    color: #ffffff;
+  }
+  30% {
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+    color: #ffffff;
+  }
+  60% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  89% {
+    color: #ffffff;
+  }
+  90% {
+    color: #000000;
+  }
+  100% {
+    color: #000000;
+  }
+}
+
+@keyframes title-2 {
+  0% {
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+    color: #ffffff;
+  }
+  30% {
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+    color: #ffffff;
+  }
+  60% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  89% {
+    color: #ffffff;
+  }
+  90% {
+    color: #000000;
+  }
+  100% {
+    color: #000000;
+  }
+}
+
+@-webkit-keyframes overlay-1 {
   0% {
     height: 100%;
   }
-  74% {
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes overlay-1 {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes overlay-2 {
+  0% {
     height: 100%;
   }
   100% {
@@ -1203,11 +1286,8 @@ a {
   }
 }
 
-@keyframes overlay {
+@keyframes overlay-2 {
   0% {
-    height: 100%;
-  }
-  74% {
     height: 100%;
   }
   100% {
@@ -1302,16 +1382,16 @@ a {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   display: block;
-  -webkit-animation: title 1.8s ease-in-out;
-          animation: title 1.8s ease-in-out;
+  -webkit-animation: title-1 5s cubic-bezier(0.13, 0.23, 0, 1);
+          animation: title-1 5s cubic-bezier(0.13, 0.23, 0, 1);
 }
 
 .page-header__title span:last-child span {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   display: block;
-  -webkit-animation: title 1.6s ease-in-out 0.3s;
-          animation: title 1.6s ease-in-out 0.3s;
+  -webkit-animation: title-2 5s cubic-bezier(0.13, 0.23, 0, 1);
+          animation: title-2 5s cubic-bezier(0.13, 0.23, 0, 1);
 }
 
 .page-header::before {
@@ -1322,8 +1402,8 @@ a {
   width: 100%;
   height: 0;
   background-color: #000000;
-  -webkit-animation: overlay 2s cubic-bezier(0.94, 0.03, 0.72, 0.64);
-          animation: overlay 2s cubic-bezier(0.94, 0.03, 0.72, 0.64);
+  -webkit-animation: overlay-1 3.5s linear, overlay-2 1.5s cubic-bezier(0.88, 0, 0.12, 1) 3.5s;
+          animation: overlay-1 3.5s linear, overlay-2 1.5s cubic-bezier(0.88, 0, 0.12, 1) 3.5s;
 }
 
 @media (max-width: 1599px) {
@@ -1512,9 +1592,6 @@ a {
   0% {
     width: 100%;
   }
-  66% {
-    width: 100%;
-  }
   100% {
     width: 0;
   }
@@ -1524,11 +1601,26 @@ a {
   0% {
     width: 100%;
   }
-  66% {
+  100% {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes banner-overlay-delay {
+  0% {
     width: 100%;
   }
   100% {
-    width: 0;
+    width: 100%;
+  }
+}
+
+@keyframes banner-overlay-delay {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
   }
 }
 
@@ -1571,13 +1663,7 @@ a {
 }
 
 .banner__item--split {
-  background-image: url("../img/banner-split.jpg");
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .banner__item--split {
-    background-image: url("../img/banner-split@2x.jpg");
-  }
+  background-image: url("../img/banner-split@2x.jpg");
 }
 
 .banner__item--split::after {
@@ -1587,19 +1673,13 @@ a {
   right: 0;
   height: 100%;
   background-color: #000000;
-  -webkit-animation: banner-overlay 3s ease-in-out;
-          animation: banner-overlay 3s ease-in-out;
+  -webkit-animation: banner-overlay-delay 4.8s linear, banner-overlay 0.8s cubic-bezier(0.6, -0.05, 0.1, 0.99) 4.8s;
+          animation: banner-overlay-delay 4.8s linear, banner-overlay 0.8s cubic-bezier(0.6, -0.05, 0.1, 0.99) 4.8s;
   z-index: 20;
 }
 
 .banner__item--mult {
-  background-image: url("../img/banner-mult.jpg");
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .banner__item--mult {
-    background-image: url("../img/banner-mult@2x.jpg");
-  }
+  background-image: url("../img/banner-mult@2x.jpg");
 }
 
 .banner__item--mult::after {
@@ -1609,19 +1689,13 @@ a {
   right: 0;
   height: 100%;
   background-color: #000000;
-  -webkit-animation: banner-overlay 3.2s ease-in-out;
-          animation: banner-overlay 3.2s ease-in-out;
+  -webkit-animation: banner-overlay-delay 5s linear, banner-overlay 0.8s cubic-bezier(0.6, -0.05, 0.1, 0.99) 5s;
+          animation: banner-overlay-delay 5s linear, banner-overlay 0.8s cubic-bezier(0.6, -0.05, 0.1, 0.99) 5s;
   z-index: 20;
 }
 
 .banner__item--aircleaner {
-  background-image: url("../img/banner-aircleaner.jpg");
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .banner__item--aircleaner {
-    background-image: url("../img/banner-aircleaner@2x.jpg");
-  }
+  background-image: url("../img/banner-aircleaner@2x.jpg");
 }
 
 .banner__item--aircleaner::after {
@@ -1631,19 +1705,13 @@ a {
   right: 0;
   height: 100%;
   background-color: #000000;
-  -webkit-animation: banner-overlay 3.4s ease-in-out;
-          animation: banner-overlay 3.4s ease-in-out;
+  -webkit-animation: banner-overlay-delay 5.2s linear, banner-overlay 1s cubic-bezier(0.6, -0.05, 0.1, 0.99) 5.2s;
+          animation: banner-overlay-delay 5.2s linear, banner-overlay 1s cubic-bezier(0.6, -0.05, 0.1, 0.99) 5.2s;
   z-index: 20;
 }
 
 .banner__item--program {
-  background-image: url("../img/banner-program.jpg");
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .banner__item--program {
-    background-image: url("../img/banner-program@2x.jpg");
-  }
+  background-image: url("../img/banner-program@2x.jpg");
 }
 
 .banner__item--program::after {
@@ -1653,8 +1721,8 @@ a {
   right: 0;
   height: 100%;
   background-color: #000000;
-  -webkit-animation: banner-overlay 3.6s ease-in-out;
-          animation: banner-overlay 3.6s ease-in-out;
+  -webkit-animation: banner-overlay-delay 5.4s linear, banner-overlay 1s cubic-bezier(0.6, -0.05, 0.1, 0.99) 5.4s;
+          animation: banner-overlay-delay 5.4s linear, banner-overlay 1s cubic-bezier(0.6, -0.05, 0.1, 0.99) 5.4s;
   z-index: 20;
 }
 

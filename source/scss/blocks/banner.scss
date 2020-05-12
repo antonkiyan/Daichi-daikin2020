@@ -1,7 +1,11 @@
 @keyframes banner-overlay {
   0% { width: 100%; }
-  66% { width: 100%; }
   100% { width: 0; }
+}
+
+@keyframes banner-overlay-delay {
+  0% { width: 100% }
+  100% { width: 100% }
 }
 
 // @keyframes back {
@@ -60,11 +64,7 @@
   }
 
   &--split {
-    background-image: url("../img/banner-split.jpg");
-
-    @include retina {
-      background-image: url("../img/banner-split@2x.jpg");
-    }
+    background-image: url("../img/banner-split@2x.jpg");
 
     &::after {
       content: "";
@@ -77,17 +77,15 @@
 
       background-color: #000000;
 
-      animation: banner-overlay 3s ease-in-out;
+      animation:
+        banner-overlay-delay 4.8s linear,
+        banner-overlay 0.8s cubic-bezier(0.6, -0.05, 0.1, 0.99) 4.8s;
       z-index: 20;
     }
   }
 
   &--mult {
-    background-image: url("../img/banner-mult.jpg");
-
-    @include retina {
-      background-image: url("../img/banner-mult@2x.jpg");
-    }
+    background-image: url("../img/banner-mult@2x.jpg");
 
     &::after {
       content: "";
@@ -100,17 +98,15 @@
 
       background-color: #000000;
 
-      animation: banner-overlay 3.2s ease-in-out;
+      animation:
+        banner-overlay-delay 5s linear,
+        banner-overlay 0.8s cubic-bezier(0.6, -0.05, 0.1, 0.99) 5s;
       z-index: 20;
     }
   }
 
   &--aircleaner {
-    background-image: url("../img/banner-aircleaner.jpg");
-
-    @include retina {
-      background-image: url("../img/banner-aircleaner@2x.jpg");
-    }
+    background-image: url("../img/banner-aircleaner@2x.jpg");
 
     &::after {
       content: "";
@@ -123,17 +119,15 @@
 
       background-color: #000000;
 
-      animation: banner-overlay 3.4s ease-in-out;
+      animation:
+        banner-overlay-delay 5.2s linear,
+        banner-overlay 1s cubic-bezier(0.6, -0.05, 0.1, 0.99) 5.2s;
       z-index: 20;
     }
   }
 
   &--program {
-    background-image: url("../img/banner-program.jpg");
-
-    @include retina {
-      background-image: url("../img/banner-program@2x.jpg");
-    }
+    background-image: url("../img/banner-program@2x.jpg");
 
     &::after {
       content: "";
@@ -146,7 +140,9 @@
 
       background-color: #000000;
 
-      animation: banner-overlay 3.6s ease-in-out;
+      animation:
+        banner-overlay-delay 5.4s linear,
+        banner-overlay 1s cubic-bezier(0.6, -0.05, 0.1, 0.99) 5.4s;
       z-index: 20;
     }
   }
