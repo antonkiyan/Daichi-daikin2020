@@ -1,53 +1,58 @@
-@keyframes title-1 {
-  0% {
-    transform: translateY(70px);
-    color: #ffffff;
-  }
+// @keyframes title-1 {
+//   0% {
+//     transform: translateY(70px);
+//     color: #ffffff;
+//   }
 
-  20% {
-    transform: translateY(70px);
-    color: #ffffff;
-  }
+//   20% {
+//     transform: translateY(70px);
+//     color: #ffffff;
+//   }
 
-  50% { transform: translateY(0); }
+//   50% { transform: translateY(0); }
 
-  89% { color: #ffffff; }
-  90% { color: #000000; }
+//   89% { color: #ffffff; }
+//   90% { color: #000000; }
 
-  100% {
-    color: #000000;
-  }
-}
+//   100% {
+//     color: #000000;
+//   }
+// }
 
-@keyframes title-2 {
-  0% {
-    transform: translateY(70px);
-    color: #ffffff;
-  }
+// @keyframes title-2 {
+//   0% {
+//     transform: translateY(70px);
+//     color: #ffffff;
+//   }
 
-  30% {
-    transform: translateY(70px);
-    color: #ffffff;
-  }
+//   30% {
+//     transform: translateY(70px);
+//     color: #ffffff;
+//   }
 
-  60% { transform: translateY(0); }
+//   60% { transform: translateY(0); }
 
-  89% { color: #ffffff; }
-  90% { color: #000000; }
+//   89% { color: #ffffff; }
+//   90% { color: #000000; }
 
-  100% {
-    color: #000000;
-  }
-}
+//   100% {
+//     color: #000000;
+//   }
+// }
 
-@keyframes overlay-1 {
-  0% { height: 100% }
-  100% { height: 100% }
-}
+// @keyframes overlay-1 {
+//   0% { height: 100% }
+//   100% { height: 100% }
+// }
 
-@keyframes overlay-2 {
-  0% { height: 100%; }
-  100% { height: 0; }
+// @keyframes overlay-2 {
+//   0% { height: 100%; }
+//   100% { height: 0; }
+// }
+
+@keyframes title {
+  0% { color: #000000 }
+  100% { color: #000000 }
 }
 
 .page-header {
@@ -57,6 +62,8 @@
   max-height: 600px;
   height: calc(100vh - 472px);
   padding-bottom: 112px;
+
+  background-color: #ffffff;
 
   &__container {
     @include container;
@@ -97,30 +104,26 @@
     font-weight: 400;
     font-size: 64px;
     line-height: 72px;
-    color: #111112;
+    color: #ffffff;
+    mix-blend-mode: difference;
 
+    animation: title 0.5s linear;
     z-index: 10;
   }
 
-  &__title span {
-    display: block;
+  &__title div {
+    position: relative;
     overflow: hidden;
+
+    height: 72px;
   }
 
-  &__title span:first-child span {
-    @include transition;
+  &__title span {
+    //@include transition;
 
-    display: block;
+    position: absolute;
 
-    animation: title-1 5s cubic-bezier(.13,.23,0,1);
-  }
-
-  &__title span:last-child span {
-    @include transition;
-
-    display: block;
-
-    animation: title-2 5s cubic-bezier(.13,.23,0,1);
+    //animation: title-1 5s cubic-bezier(.13,.23,0,1);
   }
 
   &::before {
@@ -135,9 +138,45 @@
 
     background-color: #000000;
 
-    animation:
-      overlay-1 3.5s linear,
-      overlay-2 1.5s cubic-bezier(.88,0,.12,1) 3.5s;
+    // animation:
+    //   overlay-1 3.5s linear,
+    //   overlay-2 1.5s cubic-bezier(.88,0,.12,1) 3.5s;
+  }
+}
+
+.page-header__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.page-header__overlay-item {
+  position: absolute;
+  bottom: 0;
+
+  width: 25%;
+  height: 100%;
+
+  background-color: #000000;
+  z-index: 8;
+
+  &:first-child {
+    left: 0;
+  }
+
+  &:nth-child(2) {
+    left: 25%;
+  }
+
+  &:nth-child(3) {
+    left: 50%;
+  }
+
+  &:last-child {
+    left: 75%;
   }
 }
 
@@ -157,6 +196,10 @@
 
       font-size: 48px;
       line-height: 56px;
+    }
+
+    &__title div {
+      height: 56px;
     }
   }
 }
@@ -206,6 +249,25 @@
       }
     }
   }
+
+  .page-header__overlay-item {
+    &:first-child {
+      width: 100%;
+      left: 0;
+    }
+
+    &:nth-child(2) {
+      display: none;
+    }
+
+    &:nth-child(3) {
+      display: none;
+    }
+
+    &:last-child {
+      display: none;
+    }
+  }
 }
 
 @include mobile {
@@ -224,8 +286,24 @@
     }
 
     &__title {
+      //width: 305px;
+
       font-size: 28px;
       line-height: 32px;
+
+      @media (max-width: 400px) {
+        width: 250px;
+      }
+    }
+
+    &__title div {
+      height: 32px;
+    }
+
+    &__title div:first-child {
+      @media (max-width: 400px) {
+        height: 64px;
+      }
     }
   }
 }

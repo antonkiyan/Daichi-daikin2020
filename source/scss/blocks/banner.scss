@@ -1,12 +1,12 @@
-@keyframes banner-overlay {
-  0% { width: 100%; }
-  100% { width: 0; }
-}
+// @keyframes banner-overlay {
+//   0% { width: 100%; }
+//   100% { width: 0; }
+// }
 
-@keyframes banner-overlay-delay {
-  0% { width: 100% }
-  100% { width: 100% }
-}
+// @keyframes banner-overlay-delay {
+//   0% { width: 100% }
+//   100% { width: 100% }
+// }
 
 // @keyframes back {
 //   0% {
@@ -21,6 +21,9 @@
 //     background-size: 100% auto;
 //   }
 // }
+.banner {
+  position: relative;
+}
 
 .banner__item {
   position: relative;
@@ -35,9 +38,11 @@
   color: #ffffff;
   text-decoration: none;
 
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+
+  overflow: hidden;
 
   &::before {
     @include transition;
@@ -52,6 +57,7 @@
 
     background-color: #000000;
     opacity: 5%;
+    z-index: 8;
   }
 
   &:hover::before {
@@ -63,88 +69,70 @@
     z-index: 10;
   }
 
-  &--split {
+  &-image-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &--split .banner__item-image-box {
     background-image: url("../img/banner-split@2x.jpg");
-
-    &::after {
-      content: "";
-
-      position: absolute;
-      top: 0;
-      right: 0;
-
-      height: 100%;
-
-      background-color: #000000;
-
-      animation:
-        banner-overlay-delay 4.8s linear,
-        banner-overlay 0.8s cubic-bezier(0.6, -0.05, 0.1, 0.99) 4.8s;
-      z-index: 20;
-    }
   }
 
-  &--mult {
+  &--mult .banner__item-image-box {
     background-image: url("../img/banner-mult@2x.jpg");
-
-    &::after {
-      content: "";
-
-      position: absolute;
-      top: 0;
-      right: 0;
-
-      height: 100%;
-
-      background-color: #000000;
-
-      animation:
-        banner-overlay-delay 5s linear,
-        banner-overlay 0.8s cubic-bezier(0.6, -0.05, 0.1, 0.99) 5s;
-      z-index: 20;
-    }
   }
 
-  &--aircleaner {
+  &--aircleaner .banner__item-image-box {
     background-image: url("../img/banner-aircleaner@2x.jpg");
-
-    &::after {
-      content: "";
-
-      position: absolute;
-      top: 0;
-      right: 0;
-
-      height: 100%;
-
-      background-color: #000000;
-
-      animation:
-        banner-overlay-delay 5.2s linear,
-        banner-overlay 1s cubic-bezier(0.6, -0.05, 0.1, 0.99) 5.2s;
-      z-index: 20;
-    }
   }
 
-  &--program {
+  &--program .banner__item-image-box {
     background-image: url("../img/banner-program@2x.jpg");
+  }
+}
 
-    &::after {
-      content: "";
+.banner__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
 
-      position: absolute;
-      top: 0;
-      right: 0;
+  width: 100%;
+  height: 100%;
+}
 
-      height: 100%;
+.banner__overlay-item {
+  position: absolute;
 
-      background-color: #000000;
+  top: 0;
 
-      animation:
-        banner-overlay-delay 5.4s linear,
-        banner-overlay 1s cubic-bezier(0.6, -0.05, 0.1, 0.99) 5.4s;
-      z-index: 20;
-    }
+  width: 25%;
+  height: 100%;
+
+  background-color: #000000;
+  z-index: 11;
+
+  &:first-child {
+    right: 75%;
+  }
+
+  &:nth-child(2) {
+    right: 50%;
+  }
+
+  &:nth-child(3) {
+    right: 25%;
+  }
+
+  &:nth-child(4) {
+    right: 0;
   }
 }
 
@@ -164,6 +152,7 @@
 
   background-image: url("../img/d-degree.png");
   background-size: 72px auto;
+  z-index: 11;
 
   @include retina {
     background-image: url("../img/d-degree@2x.png");
@@ -212,8 +201,8 @@
     font-size: 32px;
     line-height: 36px;
 
-    background-position: top center;
-    background-size: 400px auto;
+    // background-position: top center;
+    // background-size: 400px auto;
 
     &:hover::before {
       opacity: 5%;
@@ -221,6 +210,11 @@
 
     &::after {
       animation: none;
+    }
+
+    &__item-image-box {
+      background-position: top center;
+      background-size: 400px auto;
     }
 
     &--program {
@@ -237,6 +231,26 @@
 
     &--aircleaner {
       order: 4;
+    }
+  }
+
+  .banner__overlay-item {
+    &:first-child {
+      right: 0;
+
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      display: none;
+    }
+
+    &:nth-child(3) {
+      display: none;
+    }
+
+    &:nth-child(4) {
+      display: none;
     }
   }
 
@@ -291,24 +305,30 @@
     font-size: 24px;
     line-height: 28px;
 
-    background-size: cover;
-    background-position: bottom right;
+    // background-size: cover;
+    // background-position: bottom right;
 
-    &--split {
+    &__item-image-box {
+      background-size: cover;
+      background-position: bottom right;
+    }
+
+    &--split .banner__item-image-box {
+      background-position: bottom right;
       background-image: url("../img/banner-split@2x.jpg")
     }
 
-    &--program {
+    &--program .banner__item-image-box {
       background-position: center right;
       background-image: url("../img/banner-program@2x.jpg")
     }
 
-    &--mult {
+    &--mult .banner__item-image-box {
       background-position: center right;
       background-image: url("../img/banner-mult@2x.jpg")
     }
 
-    &--aircleaner {
+    &--aircleaner .banner__item-image-box {
       background-position: center right;
       background-image: url("../img/banner-aircleaner@2x.jpg")
     }

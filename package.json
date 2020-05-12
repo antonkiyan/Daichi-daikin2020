@@ -53,5 +53,8 @@
   ],
   "eslintIgnore": [
     "vendor/"
-  ]
+  ],
+  "dependencies": {
+    "gsap": "^3.2.6"
+  }
 }
