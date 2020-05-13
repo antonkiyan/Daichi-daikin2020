@@ -1677,17 +1677,6 @@ a {
   .banner {
     position: relative;
   }
-  .banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background-color: #000000;
-    z-index: 20;
-    -webkit-animation: banner-overlay 3s ease-in-out;
-            animation: banner-overlay 3s ease-in-out;
-  }
   .banner__item {
     width: 360px;
     min-width: 360px;
