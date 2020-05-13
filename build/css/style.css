@@ -1311,9 +1311,8 @@ a {
 @media (max-width: 1599px) {
   .page-header {
     padding-bottom: 80px;
-    min-height: auto;
-    max-height: auto;
-    height: auto;
+    min-height: 333px;
+    height: calc(100vh - 440px);
   }
   .page-header__bar {
     padding-top: 31px;
@@ -1329,6 +1328,9 @@ a {
 }
 
 @media (max-width: 1023px) {
+  .page-header {
+    min-height: 328px;
+  }
   .page-header__bar {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1379,7 +1381,18 @@ a {
 @media (max-width: 767px) {
   .page-header {
     padding-bottom: 48px;
+    min-height: 328px;
+    height: calc(100vh - 440px);
   }
+}
+
+@media (max-width: 767px) and (max-width: 439px) {
+  .page-header {
+    height: calc(100vh - 100vw);
+  }
+}
+
+@media (max-width: 767px) {
   .page-header__bar {
     padding-top: 12px;
     padding-bottom: 12px;
