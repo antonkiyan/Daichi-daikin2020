@@ -1392,7 +1392,7 @@ a {
 @media (max-width: 767px) and (max-width: 439px) {
   .page-header {
     height: calc(100vh - 100vw);
-    height: calc(var(--vh, 1vh) * 100 - 472px);
+    height: calc(var(--vh, 1vh) * 100 - 100vw);
   }
 }
 
