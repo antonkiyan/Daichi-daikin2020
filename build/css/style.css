@@ -1178,6 +1178,7 @@ a {
   min-height: 424px;
   max-height: 600px;
   height: calc(100vh - 472px);
+  height: calc(var(--vh, 1vh) * 100 - 472px);
   padding-bottom: 112px;
   background-color: #ffffff;
 }
@@ -1313,6 +1314,7 @@ a {
     padding-bottom: 80px;
     min-height: 333px;
     height: calc(100vh - 440px);
+    height: calc(var(--vh, 1vh) * 100 - 440px);
   }
   .page-header__bar {
     padding-top: 31px;
@@ -1381,14 +1383,16 @@ a {
 @media (max-width: 767px) {
   .page-header {
     padding-bottom: 48px;
-    min-height: 328px;
+    min-height: 248px;
     height: calc(100vh - 440px);
+    height: calc(var(--vh, 1vh) * 100 - 440px);
   }
 }
 
 @media (max-width: 767px) and (max-width: 439px) {
   .page-header {
     height: calc(100vh - 100vw);
+    height: calc(var(--vh, 1vh) * 100 - 472px);
   }
 }
 
