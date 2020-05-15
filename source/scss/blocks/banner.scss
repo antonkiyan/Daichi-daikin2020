@@ -99,42 +99,42 @@
   }
 }
 
-.banner__overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
+// .banner__overlay {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
 
-  width: 100%;
-  height: 100%;
-}
+//   width: 100%;
+//   height: 100%;
+// }
 
-.banner__overlay-item {
-  position: absolute;
+// .banner__overlay-item {
+//   position: absolute;
 
-  top: 0;
+//   top: 0;
 
-  width: 25%;
-  height: 100%;
+//   width: 25%;
+//   height: 100%;
 
-  background-color: #000000;
-  z-index: 11;
+//   background-color: #000000;
+//   z-index: 11;
 
-  &:first-child {
-    right: 75%;
-  }
+//   &:first-child {
+//     right: 75%;
+//   }
 
-  &:nth-child(2) {
-    right: 50%;
-  }
+//   &:nth-child(2) {
+//     right: 50%;
+//   }
 
-  &:nth-child(3) {
-    right: 25%;
-  }
+//   &:nth-child(3) {
+//     right: 25%;
+//   }
 
-  &:nth-child(4) {
-    right: 0;
-  }
-}
+//   &:nth-child(4) {
+//     right: 0;
+//   }
+// }
 
 .banner__prev,
 .banner__next {
@@ -234,25 +234,25 @@
     }
   }
 
-  .banner__overlay-item {
-    &:first-child {
-      right: 0;
+  // .banner__overlay-item {
+  //   &:first-child {
+  //     right: 0;
 
-      width: 100%;
-    }
+  //     width: 100%;
+  //   }
 
-    &:nth-child(2) {
-      display: none;
-    }
+  //   &:nth-child(2) {
+  //     display: none;
+  //   }
 
-    &:nth-child(3) {
-      display: none;
-    }
+  //   &:nth-child(3) {
+  //     display: none;
+  //   }
 
-    &:nth-child(4) {
-      display: none;
-    }
-  }
+  //   &:nth-child(4) {
+  //     display: none;
+  //   }
+  // }
 
   .banner__prev,
   .banner__next {
