@@ -1503,12 +1503,12 @@ a {
   bottom: 0;
   left: 0;
   background-color: #000000;
-  opacity: 5%;
+  opacity: 0.05;
   z-index: 8;
 }
 
 .banner__item:hover::before {
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .banner__item span {
@@ -1590,7 +1590,7 @@ a {
     line-height: 36px;
   }
   .banner__item:hover::before {
-    opacity: 5%;
+    opacity: 0.05;
   }
   .banner__item::after {
     -webkit-animation: none;
