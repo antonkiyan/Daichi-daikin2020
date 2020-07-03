@@ -9,10 +9,10 @@
 @import "general/global.scss";
 
 // blocks
+@import "blocks/button.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/banner.scss";
-@import "blocks/button.scss";
 @import "blocks/arrow-link.scss";
 @import "blocks/split-cards.scss";
 @import "blocks/split-slider.scss";
@@ -23,3 +23,4 @@
 @import "blocks/aircleaner.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/mobile-nav.scss";
+@import "blocks/promotion.scss";
