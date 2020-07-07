@@ -238,10 +238,19 @@
   }
 
   &__buy-link {
+    position: relative;
+
     margin-top: auto;
     margin-bottom: 16px;
 
     text-transform: none;
+    z-index: 10;
+  }
+
+  &__about-link {
+    position: relative;
+
+    z-index: 10;
   }
 }
 
