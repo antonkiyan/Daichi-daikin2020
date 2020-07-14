@@ -10,6 +10,8 @@
 }
 
 .promotion__aircleaner {
+  position: relative;
+
   min-height: 424px;
   width: 692px;
   padding: 47px 46px;
@@ -58,6 +60,20 @@
     color: #000;
 
     transform: rotate(-5.3deg)
+  }
+
+  &-about {
+    position: absolute;
+    bottom: 10px;
+    left: 60px;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &:hover::before {
+      background-image: url('../img/arrow-right-white.svg');
+    }
   }
 }
 
@@ -220,6 +236,25 @@
     &-desc {
       max-width: none;
       margin: 0;
+    }
+
+    &-about {
+      left: 50%;
+      margin-left: -50px;
+
+      color: #000;
+
+      &::before {
+        background-image: url('../img/arrow-right.svg');
+      }
+
+      &:hover {
+        color: #000;
+      }
+
+      &:hover::before {
+        background-image: url('../img/arrow-right.svg');
+      }
     }
   }
 
@@ -427,6 +462,24 @@
 
       transform: rotate(-5.3deg)
     }
+
+    &-about {
+      color: #fff;
+      left: 60px;
+      margin-left: 0;
+
+      &::before {
+        background-image: url('../img/arrow-right-white.svg');
+      }
+
+      &:hover {
+        color: #fff;
+      }
+
+      &:hover::before {
+        background-image: url('../img/arrow-right-white.svg');
+      }
+    }
   }
 
   .promotion__temp {
@@ -572,6 +625,13 @@
       font-size: 18px;
       line-height: 27px;
     }
+
+    &-about {
+      left: auto;
+      right: 230px;
+      bottom: 0;
+      margin-left: -50px;
+    }
   }
 
   .promotion__temp {
@@ -615,11 +675,11 @@
 
 @media (max-width: 500px) {
   .promotion__aircleaner {
-    min-height: 230px;
+    min-height: 270px;
     margin-bottom: 20px;
 
     &-title {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
 
     &-slogan {
@@ -636,6 +696,11 @@
       max-width: 160px;
       font-size: 16px;
       line-height: 22px;
+    }
+
+    &-about {
+      right: 200px;
+      bottom: -5px;
     }
   }
 
@@ -684,7 +749,7 @@
 
 @media (max-width: 420px) {
   .promotion__aircleaner {
-    min-height: 180px;
+    min-height: 210px;
     padding: 15px 20px;
 
     background:
@@ -692,7 +757,7 @@
       linear-gradient(120.4deg, #F529F8 -24.43%, #3A72DE 101.65%), #F6F6F6;
 
     &-title {
-      margin-bottom: 20px;
+      margin-bottom: 35px;
     }
 
     &-slogan {
@@ -712,6 +777,11 @@
 
       font-size: 13px;
       line-height: 18px;
+    }
+
+    &-about {
+      font-size: 14px;
+      right: 150px;
     }
   }
 
