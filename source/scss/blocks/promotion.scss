@@ -116,6 +116,7 @@
   align-items: flex-start;
   align-content: flex-start;
 
+  text-decoration: none;
   //background-color: rgba(36, 37, 38, 0.04);
 
   &::after {
@@ -190,7 +191,7 @@
     height: 127px;
 
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top 15px;
   }
 
   &-mobile-control {
@@ -206,6 +207,22 @@
 
     background-image: url("../img/climat-online-logo.svg");
     background-size: 154px auto;
+  }
+
+  &-about {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+
+    margin-left: -50px;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &:hover::before {
+      background-image: url('../img/arrow-right.svg');
+    }
   }
 }
 
@@ -562,7 +579,7 @@
 
     &-wifi-pic {
       width: 30%;
-      height: 80px;
+      height: 100px;
       margin: 0;
       margin-right: 3%;
 
@@ -737,12 +754,16 @@
     }
 
     &-wifi-pic {
-      height: 50px;
+      height: 80px;
     }
 
     &-mobile-control,
     &-climat-online {
       height: 50px;
+    }
+
+    &-about {
+      bottom: 0;
     }
   }
 }
