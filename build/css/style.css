@@ -4014,6 +4014,7 @@ a {
           align-items: flex-start;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+  text-decoration: none;
 }
 
 .promotion__r32::after {
@@ -4085,7 +4086,7 @@ a {
 .promotion__r32-mobile-control, .promotion__r32-climat-online {
   height: 127px;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center top 15px;
 }
 
 .promotion__r32-mobile-control {
@@ -4099,6 +4100,21 @@ a {
   width: 183px;
   background-image: url("../img/climat-online-logo.svg");
   background-size: 154px auto;
+}
+
+.promotion__r32-about {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -50px;
+}
+
+.promotion__r32-about:hover {
+  color: #fff;
+}
+
+.promotion__r32-about:hover::before {
+  background-image: url("../img/arrow-right.svg");
 }
 
 @media (max-width: 1599px) {
@@ -4433,7 +4449,7 @@ a {
   }
   .promotion__r32-wifi-pic {
     width: 30%;
-    height: 80px;
+    height: 100px;
     margin: 0;
     margin-right: 3%;
     background-image: url("../img/wifi-pic.png");
@@ -4568,10 +4584,13 @@ a {
     line-height: 22px;
   }
   .promotion__r32-wifi-pic {
-    height: 50px;
+    height: 80px;
   }
   .promotion__r32-mobile-control, .promotion__r32-climat-online {
     height: 50px;
+  }
+  .promotion__r32-about {
+    bottom: 0;
   }
 }
 
