@@ -3911,9 +3911,11 @@ a {
 }
 
 .promotion__aircleaner {
+  position: relative;
   min-height: 424px;
   width: 692px;
   padding: 47px 46px;
+  text-decoration: none;
   background: url("../img/promotion-1-bg.png") bottom right no-repeat, linear-gradient(120.4deg, #F529F8 -24.43%, #3A72DE 101.65%), #F6F6F6;
 }
 
@@ -3953,6 +3955,20 @@ a {
   color: #000;
   -webkit-transform: rotate(-5.3deg);
           transform: rotate(-5.3deg);
+}
+
+.promotion__aircleaner-about {
+  position: absolute;
+  bottom: 10px;
+  left: 60px;
+}
+
+.promotion__aircleaner-about:hover {
+  color: #fff;
+}
+
+.promotion__aircleaner-about:hover::before {
+  background-image: url("../img/arrow-right-white.svg");
 }
 
 .promotion__temp {
@@ -4111,6 +4127,20 @@ a {
   .promotion__aircleaner-desc {
     max-width: none;
     margin: 0;
+  }
+  .promotion__aircleaner-about {
+    left: 50%;
+    margin-left: -50px;
+    color: #000;
+  }
+  .promotion__aircleaner-about::before {
+    background-image: url("../img/arrow-right.svg");
+  }
+  .promotion__aircleaner-about:hover {
+    color: #000;
+  }
+  .promotion__aircleaner-about:hover::before {
+    background-image: url("../img/arrow-right.svg");
   }
   .promotion__temp {
     width: 465px;
@@ -4313,6 +4343,20 @@ a {
     -webkit-transform: rotate(-5.3deg);
             transform: rotate(-5.3deg);
   }
+  .promotion__aircleaner-about {
+    color: #fff;
+    left: 60px;
+    margin-left: 0;
+  }
+  .promotion__aircleaner-about::before {
+    background-image: url("../img/arrow-right-white.svg");
+  }
+  .promotion__aircleaner-about:hover {
+    color: #fff;
+  }
+  .promotion__aircleaner-about:hover::before {
+    background-image: url("../img/arrow-right-white.svg");
+  }
   .promotion__temp {
     width: 100%;
     min-height: 424px;
@@ -4435,6 +4479,12 @@ a {
     font-size: 18px;
     line-height: 27px;
   }
+  .promotion__aircleaner-about {
+    left: auto;
+    right: 230px;
+    bottom: 0;
+    margin-left: -50px;
+  }
   .promotion__temp {
     min-height: 300px;
     padding-top: 25px;
@@ -4468,11 +4518,11 @@ a {
 
 @media (max-width: 500px) {
   .promotion__aircleaner {
-    min-height: 230px;
+    min-height: 270px;
     margin-bottom: 20px;
   }
   .promotion__aircleaner-title {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
   .promotion__aircleaner-slogan {
     font-size: 15px;
@@ -4486,6 +4536,10 @@ a {
     max-width: 160px;
     font-size: 16px;
     line-height: 22px;
+  }
+  .promotion__aircleaner-about {
+    right: 200px;
+    bottom: -5px;
   }
   .promotion__temp {
     min-height: 230px;
@@ -4523,12 +4577,12 @@ a {
 
 @media (max-width: 420px) {
   .promotion__aircleaner {
-    min-height: 180px;
+    min-height: 210px;
     padding: 15px 20px;
     background: url("../img/promotion-1-bg.png") top calc(50% + 10px) right/cover no-repeat, linear-gradient(120.4deg, #F529F8 -24.43%, #3A72DE 101.65%), #F6F6F6;
   }
   .promotion__aircleaner-title {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
   .promotion__aircleaner-slogan {
     font-size: 13px;
@@ -4543,6 +4597,10 @@ a {
     margin-left: 5px;
     font-size: 13px;
     line-height: 18px;
+  }
+  .promotion__aircleaner-about {
+    font-size: 14px;
+    right: 150px;
   }
   .promotion__temp {
     padding: 15px 20px;
