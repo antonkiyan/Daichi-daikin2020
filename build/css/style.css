@@ -3971,6 +3971,10 @@ a {
   background-image: url("../img/arrow-right-white.svg");
 }
 
+.promotion__aircleaner.hidden {
+  display: none;
+}
+
 .promotion__temp {
   padding: 43px 48px;
   min-height: 424px;
