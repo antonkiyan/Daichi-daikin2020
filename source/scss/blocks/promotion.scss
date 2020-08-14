@@ -75,6 +75,10 @@
       background-image: url('../img/arrow-right-white.svg');
     }
   }
+
+  &.hidden {
+    display: none;
+  }
 }
 
 .promotion__temp {
