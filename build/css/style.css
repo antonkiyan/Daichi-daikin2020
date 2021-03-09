@@ -1060,24 +1060,35 @@ button.swiper-pagination-bullet {
 
 /* playfair-display-regular - latin */
 @font-face {
-  font-family: "PT Root UI";
+  font-family: "GothamPro";
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/PT Root UI_Medium.eot");
+  src: url("../fonts/GothamProMedium.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../fonts/PT Root UI_Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/PT Root UI_Medium.woff2") format("woff2"), url("../fonts/PT Root UI_Medium.woff") format("woff"), url("../fonts/PT Root UI_Medium.ttf") format("truetype"), url("../fonts/PT Root UI_Medium.svg#PlayfairDisplay") format("svg");
+  src: local(""), url("../fonts/GothamProMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProMedium.woff2") format("woff2"), url("../fonts/GothamProMedium.woff") format("woff"), url("../fonts/GothamProMedium.ttf") format("truetype"), url("../fonts/GothamProMedium.svg#PlayfairDisplay") format("svg");
   /* Legacy iOS */
 }
 
 @font-face {
-  font-family: "PT Root UI";
+  font-family: "GothamPro";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/PT Root UI_Regular.eot");
+  src: url("../fonts/GothamProRegular.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../fonts/PT Root UI_Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PT Root UI_Regular.woff2") format("woff2"), url("../fonts/PT Root UI_Regular.woff") format("woff"), url("../fonts/PT Root UI_Regular.ttf") format("truetype"), url("../fonts/PT Root UI_Regular.svg#PlayfairDisplay") format("svg");
+  src: local(""), url("../fonts/GothamProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProRegular.woff2") format("woff2"), url("../fonts/GothamProRegular.woff") format("woff"), url("../fonts/GothamProRegular.ttf") format("truetype"), url("../fonts/GothamProRegular.svg#PlayfairDisplay") format("svg");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "GothamPro";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/GothamProLight.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/GothamProLight.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProLight.woff2") format("woff2"), url("../fonts/GothamProLight.woff") format("woff"), url("../fonts/GothamProLight.ttf") format("truetype"), url("../fonts/GothamProLight.svg#PlayfairDisplay") format("svg");
   /* Legacy iOS */
 }
 
@@ -1838,44 +1849,30 @@ a {
   background-repeat: no-repeat;
 }
 
-.split-cards__item:not(:nth-child(3n + 4)) {
-  margin-right: auto;
+.split-cards__item:not(:nth-child(3n)) {
+  margin-right: 24px;
 }
 
 .split-cards__item:first-child {
-  width: 100%;
-  min-height: 424px;
-  margin-right: 0;
-  padding: 64px 849px 80px 133px;
-  background: url("../img/ftxb-rxb-big.png") top 45px right/567px auto no-repeat, linear-gradient(139.35deg, #921FD8 0%, #4778D8 56.99%, #00DBDE 119.8%), #F6F6F6;
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .split-cards__item:first-child {
-    background: url("../img/ftxb-rxb-big@2x.png") top 45px right/567px auto no-repeat, linear-gradient(139.35deg, #921FD8 0%, #4778D8 56.99%, #00DBDE 119.8%), #F6F6F6;
-  }
-}
-
-.split-cards__item:nth-child(2) {
   background-image: url("../img/ftxf-rxf.png");
   background-size: 326px auto;
   background-position: top 237px center;
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .split-cards__item:nth-child(2) {
-    background-image: url("../img/ftxf-rxf@2x.png");
-  }
+.split-cards__item:nth-child(2) {
+  background-image: url("../img/ftxb-front.png");
+  background-size: 350px auto;
+  background-position: top 285px center;
 }
 
-.split-cards__item:nth-child(3) {
+.split-cards__item:nth-child(7) {
   background-image: url("../img/ftxm-rxm.png");
   background-size: 326px auto;
   background-position: top 237px center;
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .split-cards__item:nth-child(3) {
+  .split-cards__item:nth-child(7) {
     background-image: url("../img/ftxm-rxm@2x.png");
   }
 }
@@ -1916,14 +1913,14 @@ a {
   }
 }
 
-.split-cards__item:nth-child(7) {
+.split-cards__item:nth-child(3) {
   background-image: url("../img/ftxp-rxp.png");
   background-size: 375px auto;
   background-position: top 237px center;
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .split-cards__item:nth-child(7) {
+  .split-cards__item:nth-child(3) {
     background-image: url("../img/ftxp-rxp@2x.png");
   }
 }
@@ -1973,6 +1970,10 @@ a {
   margin-right: 22px;
 }
 
+.split-cards__about-link {
+  display: inline-block;
+}
+
 .split-cards__about-link--main:hover {
   color: #fff;
   opacity: 0.8;
@@ -1990,21 +1991,11 @@ a {
   .split-cards__item {
     width: 468px;
   }
-  .split-cards__item:not(:nth-child(3n + 4)) {
+  .split-cards__item:not(:nth-child(3n)) {
     margin-right: 0;
   }
-  .split-cards__item:not(:nth-child(2n + 1)) {
+  .split-cards__item:not(:nth-child(2n)) {
     margin-right: auto;
-  }
-  .split-cards__item:first-child {
-    padding: 64px 513px 80px 21px;
-    background: url("../img/ftxb-rxb-big.png") top 45px right/502px auto no-repeat, linear-gradient(139.35deg, #921FD8 0%, #4778D8 56.99%, #00DBDE 119.8%), #F6F6F6;
-  }
-}
-
-@media (max-width: 1599px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1599px) and (min-resolution: 144dpi), (max-width: 1599px) and (min-resolution: 1.5dppx) {
-  .split-cards__item:first-child {
-    background: url("../img/ftxb-rxb-big@2x.png") top 45px right/502px auto no-repeat, linear-gradient(139.35deg, #921FD8 0%, #4778D8 56.99%, #00DBDE 119.8%), #F6F6F6;
   }
 }
 
@@ -2021,22 +2012,12 @@ a {
     padding: 24px 50px;
   }
   .split-cards__item:first-child {
-    min-height: 376px;
-    padding: 64px 418px 64px 50px;
-    background: url("../img/ftxb-rxb-big.png") top 45px right -10px/378px auto no-repeat, linear-gradient(139.35deg, #921FD8 0%, #4778D8 56.99%, #00DBDE 119.8%), #F6F6F6;
-  }
-}
-
-@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-  .split-cards__item:first-child {
-    background: url("../img/ftxb-rxb-big@2x.png") top 45px right -10px/378px auto no-repeat, linear-gradient(139.35deg, #921FD8 0%, #4778D8 56.99%, #00DBDE 119.8%), #F6F6F6;
-  }
-}
-
-@media (max-width: 1023px) {
-  .split-cards__item:nth-child(2) {
     background-size: 204px auto;
     background-position: top 144px center;
+  }
+  .split-cards__item:nth-child(2) {
+    background-size: 204px auto;
+    background-position: top 180px center;
   }
   .split-cards__item:nth-child(3) {
     background-size: 204px auto;
@@ -2044,11 +2025,11 @@ a {
   }
   .split-cards__item:nth-child(4) {
     background-size: 204px auto;
-    background-position: top 167px center;
+    background-position: top 150px center;
   }
   .split-cards__item:nth-child(5) {
     background-size: 204px auto;
-    background-position: top 167px center;
+    background-position: top 150px center;
   }
   .split-cards__item:nth-child(6) {
     background-size: 244px auto;
@@ -2098,11 +2079,6 @@ a {
   .split-cards__item:nth-child(n) {
     margin-right: 0;
   }
-  .split-cards__item:first-child {
-    min-height: 400px;
-    padding: 24px 18px;
-    background: url("../img/ftxb-rxb.png") top 144px center/204px auto no-repeat, linear-gradient(104.17deg, #921FD8 0%, #4778D8 56.99%, #00DBDE 119.8%), #F6F6F6;
-  }
   .split-cards__item:nth-child(4) {
     min-height: 424px;
     background-size: 242px auto;
@@ -2111,9 +2087,6 @@ a {
   .split-cards__item:nth-child(5) {
     background-size: 242px auto;
     background-position: bottom 120px center;
-  }
-  .split-cards__item:nth-child(6) .split-cards__desc {
-    padding: 0 50px;
   }
   .split-cards__name {
     font-size: 18px;
